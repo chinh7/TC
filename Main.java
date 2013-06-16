@@ -45,9 +45,16 @@ public class Main {
         String[] roads = {"2 3 400", "4 1 500", "4 3 300", "1 0 700", "0 2 400"};
         System.out.println(new TravellingPurchasingMan().maxStores(N, interestingStores, roads));
     }
+    public static void testFoxAndMp3(){
+        String[] list = new FoxAndMp3().playList(1000000000);
+        for(String item : list){
+            System.out.println(item);
+        }
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
-        testTravellingPurchasingMan();
+//        testTravellingPurchasingMan();
+        testFoxAndMp3();
     }
 }
