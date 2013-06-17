@@ -51,10 +51,23 @@ public class Main {
             System.out.println(item);
         }
     }
+    public static void testArcadeManao(){
+        String[] level =
+                {"XXXXXXXXXX",
+                "...X......",
+                "XXX.......",
+                "X.....XXXX",
+                "..XXXXX..X",
+                ".........X",
+                ".........X",
+                "XXXXXXXXXX"};
+        System.out.println(new ArcadeManao().shortestLadder(level, 1, 1));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
 //        testTravellingPurchasingMan();
-        testFoxAndMp3();
+//        testFoxAndMp3();
+        testArcadeManao();
     }
 }
