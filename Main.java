@@ -63,11 +63,20 @@ public class Main {
                 "XXXXXXXXXX"};
         System.out.println(new ArcadeManao().shortestLadder(level, 1, 1));
     }
+    public static void testSPartition(){
+        System.out.println(new SPartition().getCount(""));
+    }
+    public static void testTeamContest(){
+        int[] strength = {53,47,88,79,99,75,28,54,65,14,22,13,11,31,43};
+        System.out.println(new TeamContest().worstRank(strength));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
 //        testTravellingPurchasingMan();
 //        testFoxAndMp3();
-        testArcadeManao();
+//        testArcadeManao();
+//        testSPartition();
+        testTeamContest();
     }
 }
