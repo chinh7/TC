@@ -126,6 +126,10 @@ public class Main {
         System.out.println(new ColorfulWolves().getmin(colormap));
 
     }
+    public static void testColorfulCupcakesDivTwo(){
+        String cupcakes = "AAAAAAAAAABBBBBBBBBBBBBCCCCC";
+        System.out.println(new ColorfulCupcakesDivTwo().countArrangements(cupcakes));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -134,6 +138,7 @@ public class Main {
 //        testArcadeManao();
 //        testSPartition();
 //        testTeamContest();
-        testColorfulWolves();
+//        testColorfulWolves();
+        testColorfulCupcakesDivTwo();
     }
 }
