@@ -130,6 +130,14 @@ public class Main {
         String cupcakes = "AAAAAAAAAABBBBBBBBBBBBBCCCCC";
         System.out.println(new ColorfulCupcakesDivTwo().countArrangements(cupcakes));
     }
+
+    public static void testActivateGame(){
+        String[] grid = {"AAA",
+                "AAA",
+                "AAA"}
+                ;
+        System.out.println(new ActivateGame().findMaxScore(grid));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -139,6 +147,7 @@ public class Main {
 //        testSPartition();
 //        testTeamContest();
 //        testColorfulWolves();
-        testColorfulCupcakesDivTwo();
+//        testColorfulCupcakesDivTwo();
+        testActivateGame();
     }
 }
