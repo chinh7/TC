@@ -1,3 +1,5 @@
+package topcoder.datastructure;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chinh

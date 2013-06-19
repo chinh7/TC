@@ -1,3 +1,5 @@
+package topcoder.dp;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chinh
