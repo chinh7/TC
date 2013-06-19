@@ -138,6 +138,26 @@ public class Main {
                 ;
         System.out.println(new ActivateGame().findMaxScore(grid));
     }
+
+    public static void testTopView(){
+        String[] grid =
+               {"aabbaaaaaaaaaaaaaaaaaa",
+                "aabbccccccccccccccaaaa",
+                "aab11111ccccccccccaaaa",
+                "aab12221ccccccccccaaaa",
+                "aab12221ccccccccccaaaa",
+                "aab12221ccccccccccaaaa",
+                "aab12221ccccccccccaaaa",
+                "aab12221ccccccccccaaaa",
+                "aab12221ddddddddddaaaa",
+                "aab13331DDDDDDDDDDaaaa",
+                "aab13331DDDDDDDDDDaaaa",
+                "aa.11111DDDDDDDDDDaaaa",
+                "aaaaaaaaaaaaaaaaaaaaaa"};
+
+        System.out.println(new TopView().findOrder(grid));
+
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -148,6 +168,7 @@ public class Main {
 //        testTeamContest();
 //        testColorfulWolves();
 //        testColorfulCupcakesDivTwo();
-        testActivateGame();
+//        testActivateGame();
+        testTopView();
     }
 }
