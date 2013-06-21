@@ -2,10 +2,7 @@ import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
 import topcoder.dp.SPartition;
 import topcoder.dp.TravellingPurchasingMan;
-import topcoder.graph.ActivateGame;
-import topcoder.graph.ColorfulWolves;
-import topcoder.graph.JumpingBoard;
-import topcoder.graph.TopView;
+import topcoder.graph.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -177,6 +174,10 @@ public class Main {
                 ;
         System.out.println(new JumpingBoard().maxJumps(board));
     }
+    public static void testRabbitJumping(){
+        int[] holes = {};
+        System.out.println(new RabbitJumping().getMinimum(holes, 3));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -189,6 +190,7 @@ public class Main {
 //        testColorfulCupcakesDivTwo();
 //        testActivateGame();
 //        testTopView();
-        testJumpingBoard();
+//        testJumpingBoard();
+        testRabbitJumping();
     }
 }
