@@ -4,6 +4,7 @@ import topcoder.dp.SPartition;
 import topcoder.dp.TravellingPurchasingMan;
 import topcoder.graph.ActivateGame;
 import topcoder.graph.ColorfulWolves;
+import topcoder.graph.JumpingBoard;
 import topcoder.graph.TopView;
 
 /**
@@ -166,6 +167,16 @@ public class Main {
         System.out.println(new TopView().findOrder(grid));
 
     }
+    public static void testJumpingBoard(){
+        String[] board =
+                {"2H9HH11",
+                        "HHHHH11",
+                        "9HHHH11"}
+
+
+                ;
+        System.out.println(new JumpingBoard().maxJumps(board));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -177,6 +188,7 @@ public class Main {
 //        testColorfulWolves();
 //        testColorfulCupcakesDivTwo();
 //        testActivateGame();
-        testTopView();
+//        testTopView();
+        testJumpingBoard();
     }
 }
