@@ -1,3 +1,4 @@
+import topcoder.MazeOnFire;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
 import topcoder.dp.SPartition;
@@ -60,13 +61,13 @@ public class Main {
     public static void testArcadeManao(){
         String[] level =
                 {"XXXXXXXXXX",
-                "...X......",
-                "XXX.......",
-                "X.....XXXX",
-                "..XXXXX..X",
-                ".........X",
-                ".........X",
-                "XXXXXXXXXX"};
+                        "...X......",
+                        "XXX.......",
+                        "X.....XXXX",
+                        "..XXXXX..X",
+                        ".........X",
+                        ".........X",
+                        "XXXXXXXXXX"};
         System.out.println(new ArcadeManao().shortestLadder(level, 1, 1));
     }
     public static void testSPartition(){
@@ -147,19 +148,19 @@ public class Main {
 
     public static void testTopView(){
         String[] grid =
-               {"aabbaaaaaaaaaaaaaaaaaa",
-                "aabbccccccccccccccaaaa",
-                "aab11111ccccccccccaaaa",
-                "aab12221ccccccccccaaaa",
-                "aab12221ccccccccccaaaa",
-                "aab12221ccccccccccaaaa",
-                "aab12221ccccccccccaaaa",
-                "aab12221ccccccccccaaaa",
-                "aab12221ddddddddddaaaa",
-                "aab13331DDDDDDDDDDaaaa",
-                "aab13331DDDDDDDDDDaaaa",
-                "aa.11111DDDDDDDDDDaaaa",
-                "aaaaaaaaaaaaaaaaaaaaaa"};
+                {"aabbaaaaaaaaaaaaaaaaaa",
+                        "aabbccccccccccccccaaaa",
+                        "aab11111ccccccccccaaaa",
+                        "aab12221ccccccccccaaaa",
+                        "aab12221ccccccccccaaaa",
+                        "aab12221ccccccccccaaaa",
+                        "aab12221ccccccccccaaaa",
+                        "aab12221ccccccccccaaaa",
+                        "aab12221ddddddddddaaaa",
+                        "aab13331DDDDDDDDDDaaaa",
+                        "aab13331DDDDDDDDDDaaaa",
+                        "aa.11111DDDDDDDDDDaaaa",
+                        "aaaaaaaaaaaaaaaaaaaaaa"};
 
         System.out.println(new TopView().findOrder(grid));
 
@@ -178,6 +179,16 @@ public class Main {
         int[] holes = {};
         System.out.println(new RabbitJumping().getMinimum(holes, 3));
     }
+    public static void testMazeOnFire(){
+        String[] maze =
+                {"...$..",
+                        "..#...",
+                        "..###.",
+                        "..#...",
+                        "F.#.F."}
+                ;
+        System.out.println(new MazeOnFire().maximumTurns(maze));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -191,6 +202,7 @@ public class Main {
 //        testActivateGame();
 //        testTopView();
 //        testJumpingBoard();
-        testRabbitJumping();
+//        testRabbitJumping();
+        testMazeOnFire();
     }
 }
