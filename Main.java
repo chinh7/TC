@@ -1,3 +1,4 @@
+import topcoder.EnemyTowers;
 import topcoder.MazeOnFire;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
@@ -189,6 +190,14 @@ public class Main {
                 ;
         System.out.println(new MazeOnFire().maximumTurns(maze));
     }
+    public static void testEnemyTowers(){
+        System.out.println(new EnemyTowers().attack(200
+                ,50
+                ,3
+                ,10
+                ,5
+        ));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -203,6 +212,7 @@ public class Main {
 //        testTopView();
 //        testJumpingBoard();
 //        testRabbitJumping();
-        testMazeOnFire();
+//        testMazeOnFire();
+        testEnemyTowers();
     }
 }
