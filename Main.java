@@ -3,7 +3,6 @@ import topcoder.MatchString;
 import topcoder.MazeOnFire;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
-import topcoder.dp.FoxAndMountain;
 import topcoder.dp.SPartition;
 import topcoder.dp.TravellingPurchasingMan;
 import topcoder.graph.*;
@@ -252,9 +251,6 @@ public class Main {
                 "NOPQRSTU"};
         System.out.println(new MatchString().placeWords(matchString, matchWords));
     }
-    public static void testFoxAndMountain(){
-        System.out.println(new FoxAndMountain().count(4, "UD"));
-    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -273,6 +269,5 @@ public class Main {
 //        testEnemyTowers();
 //        testGameOnABoard();
 //        testMatchString();
-        testFoxAndMountain();
     }
 }
