@@ -1,7 +1,9 @@
 import topcoder.EnemyTowers;
+import topcoder.MatchString;
 import topcoder.MazeOnFire;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
+import topcoder.dp.FoxAndMountain;
 import topcoder.dp.SPartition;
 import topcoder.dp.TravellingPurchasingMan;
 import topcoder.graph.*;
@@ -243,6 +245,16 @@ public class Main {
 
         System.out.println(new GameOnABoard().optimalChoice(cost));
     }
+    public static void testMatchString(){
+        String matchString = "TOP";
+        String[] matchWords = {"OUTTHERE",
+                "FROM",
+                "NOPQRSTU"};
+        System.out.println(new MatchString().placeWords(matchString, matchWords));
+    }
+    public static void testFoxAndMountain(){
+        System.out.println(new FoxAndMountain().count(4, "UD"));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -259,6 +271,8 @@ public class Main {
 //        testRabbitJumping();
 //        testMazeOnFire();
 //        testEnemyTowers();
-        testGameOnABoard();
+//        testGameOnABoard();
+//        testMatchString();
+        testFoxAndMountain();
     }
 }
