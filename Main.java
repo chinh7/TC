@@ -262,6 +262,10 @@ public class Main {
         String[] words = {"Don't","worry.","Be","Happy!"};
         System.out.println(new Acronyms().acronize(words));
     }
+    public static void testSpreadingNews(){
+        int[] s = {-1, 0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 7, 8, 12, 13, 14, 16, 16, 16};
+        System.out.println(new SpreadingNews().minTime(s));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -281,6 +285,7 @@ public class Main {
 //        testGameOnABoard();
 //        testMatchString();
 //        testKingdomReorganization();
-        testAcronyms();
+//        testAcronyms();
+        testSpreadingNews();
     }
 }
