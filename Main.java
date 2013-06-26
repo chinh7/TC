@@ -1,7 +1,4 @@
-import topcoder.Acronyms;
-import topcoder.EnemyTowers;
-import topcoder.MatchString;
-import topcoder.MazeOnFire;
+import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
 import topcoder.dp.SPartition;
@@ -266,6 +263,21 @@ public class Main {
         int[] s = {-1, 0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 7, 8, 12, 13, 14, 16, 16, 16};
         System.out.println(new SpreadingNews().minTime(s));
     }
+    public static void testFloorIndicator(){
+        String[] indicator = {"...",
+                ".#.",
+                "...",
+                "...",
+                "..."}
+                ;
+
+//        String[] indicator = {"###.###",
+//                "#.#.#.#",
+//                "#.#.###",
+//                "#.#...#",
+//                "###.###"};
+        System.out.println(new FloorIndicator().averageFloor(1, indicator));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -286,6 +298,7 @@ public class Main {
 //        testMatchString();
 //        testKingdomReorganization();
 //        testAcronyms();
-        testSpreadingNews();
+//        testSpreadingNews();
+        testFloorIndicator();
     }
 }
