@@ -1,3 +1,4 @@
+import topcoder.Acronyms;
 import topcoder.EnemyTowers;
 import topcoder.MatchString;
 import topcoder.MazeOnFire;
@@ -257,6 +258,10 @@ public class Main {
         String[] destroy = {"AgTqWWxEYH","gAXPgjzIRA","TXAleTmWvT","qPlAQkwxRO","WgeQAqgbJJ","WjTkqAiTzl","xzmwgiAuHb","EIWxbTuAwk","YRvRJzHwAn","HATOJlbknA"};
         System.out.println(new KingdomReorganization().getCost(kingdom, build, destroy));
     }
+    public static void testAcronyms(){
+        String[] words = {"Don't","worry.","Be","Happy!"};
+        System.out.println(new Acronyms().acronize(words));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -275,6 +280,7 @@ public class Main {
 //        testEnemyTowers();
 //        testGameOnABoard();
 //        testMatchString();
-        testKingdomReorganization();
+//        testKingdomReorganization();
+        testAcronyms();
     }
 }
