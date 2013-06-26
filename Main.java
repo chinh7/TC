@@ -251,6 +251,12 @@ public class Main {
                 "NOPQRSTU"};
         System.out.println(new MatchString().placeWords(matchString, matchWords));
     }
+    public static void testKingdomReorganization(){
+        String[] kingdom = {"0000000000","0000000011","0001010000","0010010000","0000001000","0011000000","0000100000","0000000011","0100000101","0100000110"};
+        String[] build = {"AhPEqkSFMM","hAfKPtsDad","PfAyGQkaqN","EKyAeLpRpm","qPGeASfNwo","ktQLSAnCAK","SskpfnAdJS","FDaRNCdAZz","MaqpwAJZAn","MdNmoKSznA"};
+        String[] destroy = {"AgTqWWxEYH","gAXPgjzIRA","TXAleTmWvT","qPlAQkwxRO","WgeQAqgbJJ","WjTkqAiTzl","xzmwgiAuHb","EIWxbTuAwk","YRvRJzHwAn","HATOJlbknA"};
+        System.out.println(new KingdomReorganization().getCost(kingdom, build, destroy));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -269,5 +275,6 @@ public class Main {
 //        testEnemyTowers();
 //        testGameOnABoard();
 //        testMatchString();
+        testKingdomReorganization();
     }
 }
