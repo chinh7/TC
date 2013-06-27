@@ -1,6 +1,7 @@
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.ColorfulCupcakesDivTwo;
+import topcoder.dp.PickGuitars;
 import topcoder.dp.SPartition;
 import topcoder.dp.TravellingPurchasingMan;
 import topcoder.graph.*;
@@ -278,6 +279,10 @@ public class Main {
 //                "###.###"};
         System.out.println(new FloorIndicator().averageFloor(1, indicator));
     }
+    public static void testPickGuitars(){
+        int[] values = {2,1,4,1,2,1,8,1};
+        System.out.println(new PickGuitars().maxValue(values));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -299,6 +304,9 @@ public class Main {
 //        testKingdomReorganization();
 //        testAcronyms();
 //        testSpreadingNews();
-        testFloorIndicator();
+//        testFloorIndicator();
+        testPickGuitars();
+
     }
+
 }
