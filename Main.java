@@ -283,6 +283,10 @@ public class Main {
         int[] values = {2,1,4,1,2,1,8,1};
         System.out.println(new PickGuitars().maxValue(values));
     }
+    public static void testGreedyGovernment(){
+        String[] tolls = {"X32X", "XXXX", "XXXX", "XXXX"};
+        System.out.println(new GreedyGovernment().maxAverageCost(tolls, 76));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -305,7 +309,8 @@ public class Main {
 //        testAcronyms();
 //        testSpreadingNews();
 //        testFloorIndicator();
-        testPickGuitars();
+//        testPickGuitars();
+        testGreedyGovernment();
 
     }
 
