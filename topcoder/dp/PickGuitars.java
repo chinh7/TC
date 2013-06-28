@@ -9,12 +9,12 @@ package topcoder.dp;
  */
 public class PickGuitars {
     private int sum(int i, int j, int[] values){
-        int ret = 0;
+        int sum = 0;
         while(i<=j){
-            ret+=values[i];
+            sum+=values[i];
             i++;
         }
-        return ret;
+        return sum;
     }
     public int maxValue(int[] guitarValues){
         int n = guitarValues.length-1;
