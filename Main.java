@@ -1,9 +1,6 @@
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
-import topcoder.dp.ColorfulCupcakesDivTwo;
-import topcoder.dp.PickGuitars;
-import topcoder.dp.SPartition;
-import topcoder.dp.TravellingPurchasingMan;
+import topcoder.dp.*;
 import topcoder.graph.*;
 
 /**
@@ -287,6 +284,15 @@ public class Main {
         String[] tolls = {"X32X", "XXXX", "XXXX", "XXXX"};
         System.out.println(new GreedyGovernment().maxAverageCost(tolls, 76));
     }
+    public static void testContractWork(){
+        String[] costs = {"44 92 2 78 13",
+                "36 47 76 41 71",
+                "59 27 59 35 16",
+                "40 63 7 72 76",
+                "49 80 45 67 33"};
+        System.out.println(new ContractWork().minimumCost(costs, 5));
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -310,7 +316,8 @@ public class Main {
 //        testSpreadingNews();
 //        testFloorIndicator();
 //        testPickGuitars();
-        testGreedyGovernment();
+//        testGreedyGovernment();
+        testContractWork();
 
     }
 
