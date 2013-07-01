@@ -17,6 +17,7 @@ public class ContractWork {
             assert cost.length == numTasks;
             for(int j=0; j<numTasks; j++) map[i][j] = Integer.parseInt(cost[j]);
         }
+        //min[i][j] the min cost to complete up to task j with company i as the last worker
         int[][] min = new int[numCompanies][numTasks];
         for(int j=0; j<numTasks; j++){
             for(int i=0; i<numCompanies; i++){

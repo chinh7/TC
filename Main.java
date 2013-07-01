@@ -293,6 +293,12 @@ public class Main {
         System.out.println(new ContractWork().minimumCost(costs, 5));
     }
 
+    public static void testFloodRelief(){
+        String[] heights = {"ccccc",
+                "ccccc"}
+                ;
+        System.out.println(new FloodRelief().minimumPumps(heights));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -317,8 +323,8 @@ public class Main {
 //        testFloorIndicator();
 //        testPickGuitars();
 //        testGreedyGovernment();
-        testContractWork();
-
+//        testContractWork();
+        testFloodRelief();
     }
 
 }
