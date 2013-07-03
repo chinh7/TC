@@ -299,6 +299,11 @@ public class Main {
                 ;
         System.out.println(new FloodRelief().minimumPumps(heights));
     }
+    public static void testPalindromeGame(){
+        String[] front = { "abc" }
+        ; int[] back={ 24 };
+        System.out.println(new PalindromeGame().getMaximum(front, back));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -324,7 +329,8 @@ public class Main {
 //        testPickGuitars();
 //        testGreedyGovernment();
 //        testContractWork();
-        testFloodRelief();
+//        testFloodRelief();
+        testPalindromeGame();
     }
 
 }
