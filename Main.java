@@ -313,6 +313,9 @@ public class Main {
                 ;
         System.out.println(new LightedPanels().minTouch(board));
     }
+    public static void testIdealString(){
+        System.out.println(new IdealString().construct(7));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -340,7 +343,8 @@ public class Main {
 //        testContractWork();
 //        testFloodRelief();
 //        testPalindromeGame();
-        testLightedPanels();
+//        testLightedPanels();
+        testIdealString();
     }
 
 }
