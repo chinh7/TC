@@ -304,6 +304,15 @@ public class Main {
         ; int[] back={ 24 };
         System.out.println(new PalindromeGame().getMaximum(front, back));
     }
+    public static void testLightedPanels(){
+        String[] board = {"*...",
+                "**..",
+                "..**",
+                "...*"}
+
+                ;
+        System.out.println(new LightedPanels().minTouch(board));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -330,7 +339,8 @@ public class Main {
 //        testGreedyGovernment();
 //        testContractWork();
 //        testFloodRelief();
-        testPalindromeGame();
+//        testPalindromeGame();
+        testLightedPanels();
     }
 
 }
