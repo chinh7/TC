@@ -316,6 +316,18 @@ public class Main {
     public static void testIdealString(){
         System.out.println(new IdealString().construct(7));
     }
+    public static void testLandAndSea(){
+        String[] seaMap = {
+                "............",
+                ".......xxxx.",
+                "..xxx.x...x.",
+                "..x..x..x.x.",
+                "..x.x.x...x.",
+                "..xx...xxx.."
+        };
+        int[] result = new LandAndSea().howManyIslands(seaMap);
+        for(int i : result) System.out.println(i);
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -344,7 +356,8 @@ public class Main {
 //        testFloodRelief();
 //        testPalindromeGame();
 //        testLightedPanels();
-        testIdealString();
+//        testIdealString();
+        testLandAndSea();
     }
 
 }
