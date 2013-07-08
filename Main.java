@@ -328,6 +328,27 @@ public class Main {
         int[] result = new LandAndSea().howManyIslands(seaMap);
         for(int i : result) System.out.println(i);
     }
+    static void testImportsList(){
+        String[] requires = {"NYYNYNYYYNYYNYNN"
+                ,"NNNNNNNNNNNNNNNN"
+                ,"NNNNNNNNNNYNNNNN"
+                ,"NNNNNNNNNYNNYNNN"
+                ,"NYNNNNYNNNYYNNNN"
+                ,"NYNNYNYNYNYYNNNN"
+                ,"NNNNNNNNNNYNNNNN"
+                ,"NNYNNNYNYNYNNNNN"
+                ,"NNNNNNYNNNYNNNNN"
+                ,"NNNNNNNNNNNNYNNN"
+                ,"NNNNNNNNNNNNNNNN"
+                ,"NNNNNNNNNNNNNNNN"
+                ,"NNNNNNNNNNNNNNNN"
+                ,"NNNNNNYNNNYNNNNN"
+                ,"YYYYYNYYYYYYYYNY"
+                ,"NYYYNNYNNYYNYYNN"}
+                ;
+        int[] result = new ImportsList().importsCount(requires);
+        for(int i : result) System.out.println(i);
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -357,7 +378,8 @@ public class Main {
 //        testPalindromeGame();
 //        testLightedPanels();
 //        testIdealString();
-        testLandAndSea();
+//        testLandAndSea();
+        testImportsList();
     }
 
 }
