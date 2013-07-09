@@ -349,6 +349,12 @@ public class Main {
         int[] result = new ImportsList().importsCount(requires);
         for(int i : result) System.out.println(i);
     }
+    static void testCollectingMarbles(){
+        int[] weights = { 2, 2, 2 };
+        int capacity = 1;
+        int m = 10;
+        System.out.println(new CollectingMarbles().mostMarbles(weights, capacity, m));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -379,7 +385,8 @@ public class Main {
 //        testLightedPanels();
 //        testIdealString();
 //        testLandAndSea();
-        testImportsList();
+//        testImportsList();
+        testCollectingMarbles();
     }
 
 }
