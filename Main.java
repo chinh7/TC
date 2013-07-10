@@ -355,6 +355,12 @@ public class Main {
         int m = 10;
         System.out.println(new CollectingMarbles().mostMarbles(weights, capacity, m));
     }
+    static void testUnionOfIntervals(){
+        int[] lowerBound = { 1, 2 , 4 };
+        int[] upperBound = { 7, 9 , 10 };
+        int n = 1000000;
+        System.out.println(new UnionOfIntervals().nthElement(lowerBound, upperBound, n));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -386,7 +392,8 @@ public class Main {
 //        testIdealString();
 //        testLandAndSea();
 //        testImportsList();
-        testCollectingMarbles();
+//        testCollectingMarbles();
+        testUnionOfIntervals();
     }
 
 }
