@@ -361,6 +361,10 @@ public class Main {
         int n = 1000000;
         System.out.println(new UnionOfIntervals().nthElement(lowerBound, upperBound, n));
     }
+    static void testEqualTowers(){
+        int[] bricks = { 14, 3, 20, 15, 15, 14, 24, 23, 15 };
+        System.out.println(new EqualTowers().height(bricks));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -393,7 +397,8 @@ public class Main {
 //        testLandAndSea();
 //        testImportsList();
 //        testCollectingMarbles();
-        testUnionOfIntervals();
+//        testUnionOfIntervals();
+        testEqualTowers();
     }
 
 }
