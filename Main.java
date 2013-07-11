@@ -365,6 +365,13 @@ public class Main {
         int[] bricks = { 14, 3, 20, 15, 15, 14, 24, 23, 15 };
         System.out.println(new EqualTowers().height(bricks));
     }
+    static void testAutoMarket(){
+        int[] cost = {9000, 6000, 5000, 5000, 7000};
+        int[] features =  {1, 3, 4, 5, 2};
+        int[] fixedTimes = {10, 6, 6, 5, 9};
+
+        System.out.println(new AutoMarket().maxSet(cost, features, fixedTimes));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -398,7 +405,8 @@ public class Main {
 //        testImportsList();
 //        testCollectingMarbles();
 //        testUnionOfIntervals();
-        testEqualTowers();
+//        testEqualTowers();
+        testAutoMarket();
     }
 
 }
