@@ -372,6 +372,14 @@ public class Main {
 
         System.out.println(new AutoMarket().maxSet(cost, features, fixedTimes));
     }
+    static void testCheapestRoute(){
+        int[] cost = {1,2,-1};
+        int[] enters = {0};
+        int[] exits = {2};
+        int tpc = 1000;
+        int[] result =  new CheapestRoute().routePrice(cost, enters, exits, tpc);
+        if(result.length>0) System.out.println(result[0] +" " +result[1]);
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -406,7 +414,8 @@ public class Main {
 //        testCollectingMarbles();
 //        testUnionOfIntervals();
 //        testEqualTowers();
-        testAutoMarket();
+//        testAutoMarket();
+        testCheapestRoute();
     }
 
 }
