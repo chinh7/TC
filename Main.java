@@ -380,6 +380,16 @@ public class Main {
         int[] result =  new CheapestRoute().routePrice(cost, enters, exits, tpc);
         if(result.length>0) System.out.println(result[0] +" " +result[1]);
     }
+    static void testDancingCouples(){
+        String[] canDance = {"YYNNNN",
+                "NYYNNN",
+                "NNYYNN",
+                "NNNYYN",
+                "NNNNYY",
+                "YNNNNY"};
+        int k = 3;
+        System.out.println(new DancingCouples().countPairs(canDance, k));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -415,7 +425,8 @@ public class Main {
 //        testUnionOfIntervals();
 //        testEqualTowers();
 //        testAutoMarket();
-        testCheapestRoute();
+//        testCheapestRoute();
+        testDancingCouples();
     }
 
 }
