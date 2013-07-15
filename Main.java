@@ -390,6 +390,14 @@ public class Main {
         int k = 3;
         System.out.println(new DancingCouples().countPairs(canDance, k));
     }
+    static void testTeamBuilder(){
+        String[] paths = {"01000","00100","00010","00001","10000"}
+                ;
+        int[] result = new TeamBuilder().specialLocations(paths);
+                ;
+        System.out.println(result[0] + " " + result[1]);
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -426,7 +434,8 @@ public class Main {
 //        testEqualTowers();
 //        testAutoMarket();
 //        testCheapestRoute();
-        testDancingCouples();
+//        testDancingCouples();
+        testTeamBuilder();
     }
 
 }
