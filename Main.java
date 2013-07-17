@@ -402,6 +402,11 @@ public class Main {
         int[] result = new IngredientProportions().getMasses(proportions);
         for(int r : result) System.out.print(r+" ");
     }
+    static void testSquares(){
+        String[] field = {"AABCA", "AAAAA", "BAAAB", "AAAEA", "ADBFA"};
+        System.out.println(new Squares().countSquares(field));
+    }
+
 
     public static void main(String[] args){
 //        testPenLift();
@@ -441,7 +446,8 @@ public class Main {
 //        testCheapestRoute();
 //        testDancingCouples();
 //        testTeamBuilder();
-        testIngredientProportions();
+//        testIngredientProportions();
+        testSquares();
     }
 
 }
