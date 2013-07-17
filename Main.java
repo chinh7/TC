@@ -397,6 +397,11 @@ public class Main {
                 ;
         System.out.println(result[0] + " " + result[1]);
     }
+    static void testIngredientProportions(){
+        String[] proportions = {"#4 and #0 as 1:1", "#4 and #1 as 3:1", "#4 and #2 as 5:1", "#4 and #3 as 7:1"};
+        int[] result = new IngredientProportions().getMasses(proportions);
+        for(int r : result) System.out.print(r+" ");
+    }
 
     public static void main(String[] args){
 //        testPenLift();
@@ -435,7 +440,8 @@ public class Main {
 //        testAutoMarket();
 //        testCheapestRoute();
 //        testDancingCouples();
-        testTeamBuilder();
+//        testTeamBuilder();
+        testIngredientProportions();
     }
 
 }
