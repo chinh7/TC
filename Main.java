@@ -406,6 +406,12 @@ public class Main {
         String[] field = {"AABCA", "AAAAA", "BAAAB", "AAAEA", "ADBFA"};
         System.out.println(new Squares().countSquares(field));
     }
+    static void testPermissionTree(){
+        String[] folders ={"0 Admin", "0 Bob,Joe,Bob", "0 Joe"};
+        String[] users = {"Joe", "Bob"};
+        int[] result = new PermissionTree().findHome(folders, users);
+        for(int home : result) System.out.print(home+" ");
+    }
 
 
     public static void main(String[] args){
@@ -447,7 +453,8 @@ public class Main {
 //        testDancingCouples();
 //        testTeamBuilder();
 //        testIngredientProportions();
-        testSquares();
+//        testSquares();
+        testPermissionTree();
     }
 
 }
