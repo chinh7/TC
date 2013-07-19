@@ -413,6 +413,9 @@ public class Main {
         for(int home : result) System.out.print(home+" ");
     }
 
+    static void testBunnyConverter(){
+        System.out.println(new BunnyConverter().getMinimum(499979,499979,499976,3));
+    }
 
     public static void main(String[] args){
 //        testPenLift();
@@ -454,7 +457,8 @@ public class Main {
 //        testTeamBuilder();
 //        testIngredientProportions();
 //        testSquares();
-        testPermissionTree();
+//        testPermissionTree();
+        testBunnyConverter();
     }
 
 }
