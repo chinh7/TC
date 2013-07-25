@@ -425,6 +425,12 @@ public class Main {
         System.out.println(new BagsQuiz().checkIfProper(3, actions));
     }
 
+    static void testRookAttack(){
+        String[] cutouts = {"0 0", "1 0"};
+        System.out.println(new RookAttack().howMany(2,2,cutouts));
+
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -467,7 +473,8 @@ public class Main {
 //        testSquares();
 //        testPermissionTree();
 //        testBunnyConverter();
-        testBagsQuiz();
+//        testBagsQuiz();
+        testRookAttack();
     }
 
 }
