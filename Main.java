@@ -417,6 +417,14 @@ public class Main {
         System.out.println(new BunnyConverter().getMinimum(499979,499979,499976,3));
     }
 
+    static void testBagsQuiz(){
+        String[] actions =
+                {"PUT 1 INSIDE 2", "PUT 3 INSIDE 1"}
+
+                ;
+        System.out.println(new BagsQuiz().checkIfProper(3, actions));
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -458,7 +466,8 @@ public class Main {
 //        testIngredientProportions();
 //        testSquares();
 //        testPermissionTree();
-        testBunnyConverter();
+//        testBunnyConverter();
+        testBagsQuiz();
     }
 
 }
