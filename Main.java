@@ -431,6 +431,10 @@ public class Main {
 
     }
 
+    static void testTranspose(){
+        System.out.println(new Transpose().numSwaps(5, 3));
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -474,7 +478,8 @@ public class Main {
 //        testPermissionTree();
 //        testBunnyConverter();
 //        testBagsQuiz();
-        testRookAttack();
+//        testRookAttack();
+        testTranspose();
     }
 
 }
