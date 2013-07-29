@@ -435,6 +435,9 @@ public class Main {
         System.out.println(new Transpose().numSwaps(5, 3));
     }
 
+    static void testBadSubstring(){
+         System.out.println(new BadSubstring().howMany(400));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -479,7 +482,8 @@ public class Main {
 //        testBunnyConverter();
 //        testBagsQuiz();
 //        testRookAttack();
-        testTranspose();
+//        testTranspose();
+        testBadSubstring();
     }
 
 }
