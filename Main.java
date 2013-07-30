@@ -301,7 +301,7 @@ public class Main {
     }
     public static void testPalindromeGame(){
         String[] front = { "abc" }
-        ; int[] back={ 24 };
+                ; int[] back={ 24 };
         System.out.println(new PalindromeGame().getMaximum(front, back));
     }
     public static void testLightedPanels(){
@@ -394,7 +394,7 @@ public class Main {
         String[] paths = {"01000","00100","00010","00001","10000"}
                 ;
         int[] result = new TeamBuilder().specialLocations(paths);
-                ;
+        ;
         System.out.println(result[0] + " " + result[1]);
     }
     static void testIngredientProportions(){
@@ -436,7 +436,11 @@ public class Main {
     }
 
     static void testBadSubstring(){
-         System.out.println(new BadSubstring().howMany(400));
+        System.out.println(new BadSubstring().howMany(400));
+    }
+    static void testDiceGames(){
+        int[] sides = {4,5,6};
+        System.out.println(new DiceGames().countFormations(sides));
     }
     public static void main(String[] args){
 //        testPenLift();
@@ -483,7 +487,8 @@ public class Main {
 //        testBagsQuiz();
 //        testRookAttack();
 //        testTranspose();
-        testBadSubstring();
+//        testBadSubstring();
+        testDiceGames();
     }
 
 }
