@@ -442,6 +442,17 @@ public class Main {
         int[] sides = {4,5,6};
         System.out.println(new DiceGames().countFormations(sides));
     }
+    static void testRoadReconstruction(){
+        String[] roads = {"O1 Beetown Fearnot 6","N7 Fearnot Hornytown","M8 Hornytown Belcher 10",
+                "L5 Belcher Fearnot 8","C7 Fearnot Beetown 4","K7 Quiggleville Beetown 12",
+                "H4 Beetown DryFork 6","Z0 Hornytown Belcher 1","O5 Belcher Quiggleville 10",
+                "U7 Quiggleville Fearnot 2","A8 Fearnot Quiggleville 8","T6 Beetown DryFork 17",
+                "E8 Quiggleville DryFork 8","Y4 DryFork Quiggleville 4","Q8 Hornytown DryFork 2",
+                "J9 Quiggleville DryFork 19","M4 DryFork Quiggleville 7","T1 DryFork Fearnot 9",
+                "G4 Fearnot DryFork 6","V9 Hornytown Beetown 5","O6 Quiggleville Beetown 4",
+                "L8 Beetown Roachtown 5","D5 Belcher DryFork 8","W5 Belcher DryFork 1"}             ;
+        System.out.println(new RoadReconstruction().selectReconstruction(roads));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -488,7 +499,8 @@ public class Main {
 //        testRookAttack();
 //        testTranspose();
 //        testBadSubstring();
-        testDiceGames();
+//        testDiceGames();
+        testRoadReconstruction();
     }
 
 }
