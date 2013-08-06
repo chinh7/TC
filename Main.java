@@ -453,6 +453,59 @@ public class Main {
                 "L8 Beetown Roachtown 5","D5 Belcher DryFork 8","W5 Belcher DryFork 1"}             ;
         System.out.println(new RoadReconstruction().selectReconstruction(roads));
     }
+    static void testSkewedPerspectives(){
+        int[] cubes = {0,1,0};
+        int b = 3;
+        int w = 2;
+        String[] views = {"b","bb","bbb","bbbb","bbbbb","bbbbbb",
+                "1", "1b","1bb","1bbb","1bbbb","1bbbbb","1bbbbbb",
+                "b1","b1b","b1bb","b1bbb","b1bbbb","b1bbbbb",
+                "bb1","bb1b","bb1bb","bb1bbb","bb1bbbb",
+                "bbb1","bbb1b","bbb1bb","bbb1bbb",
+                "bbbb1","bbbb1b","bbbb1bb",
+                "bbbbb1","bbbbb1b",
+                "bbbbbb1" };
+        String[] valid = {"invalid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "valid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "valid",
+                "valid",
+                "valid",
+                "invalid",
+                "valid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "invalid",
+                "valid",
+                "invalid",
+                "valid",
+                "invalid",
+                "invalid",
+                "valid" };
+        String[] result = new SkewedPerspectives().areTheyPossible(cubes, b, w, views);
+        for(int i=0; i<views.length; i++){
+            if(!result[i].equals(valid[i])){
+                System.out.println(views[i]+"  "+result[i]);
+            }
+        }
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -500,7 +553,8 @@ public class Main {
 //        testTranspose();
 //        testBadSubstring();
 //        testDiceGames();
-        testRoadReconstruction();
+//        testRoadReconstruction();
+        testSkewedPerspectives();
     }
 
 }
