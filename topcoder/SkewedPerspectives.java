@@ -24,22 +24,23 @@ public class SkewedPerspectives {
             int width = w;
             while(j<view.length()){
                 if(view.charAt(j)=='b'){
-                    int l = 1;
+                    int l = 1; //length of spanned 'b's
                     while(j+l<view.length() && view.charAt(j+l)=='b') l++;
-                    b = b - l/2 - l%2;
+                    b = b - l/2 - l%2;  //use an additional b if l is odd
                     if(b<0){
                         valid = false;
                         break;
                     }
                     if(l%2!=0){
-                        if(j==0){
+                        if(j==0){  //upfront (block 0)
                             platform++;
                             odd++;
-                        } else{
+                        } else{    //already have smt in the front
                             odd+=(j-1)%2;
                             platform+=j-1;
                         }
-                        width--;
+
+                        width--; //need additional block in this case
                         if(width==0){
                             valid = false;
                             break;
