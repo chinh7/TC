@@ -506,6 +506,30 @@ public class Main {
             }
         }
     }
+    static void testOrderOfTheHats(){
+        String[] spellChart = {"YYYYYNNYYYNYNNNNYNNY",
+                "NYNNNYYNNYNYYYNYYYYY",
+                "NNYNNNYYNNNNNNYYYYNY",
+                "YYNYNYYNNYYYNYNNNYYY",
+                "NYYNNYNYNYNNNNYYYNYN",
+                "NNNNNYYNYNNYYYYNYYYN",
+                "YNYNYYNNNYNNNNNYNNYY",
+                "NYYYYNYNYNNYNNYNNNNY",
+                "YYYYNYYNNYYYNNYNNYNY",
+                "YYYYYYNYNYNYNNNNNNYN",
+                "NNYYYYYNNNYNNNYNNNNY",
+                "YYNNNYNYYNYYNYYNYNYN",
+                "NNYNYYNYYNYYNYNYNYYN",
+                "YNYNYYNYNNNYNYNYYNYY",
+                "NNYNNNYYYYYYYYYYYNYY",
+                "YYYYYNYYNYYYYYNNYNNN",
+                "NYYYYYYYYNNNNNYYNNYN",
+                "YNNYNNNYYNYYYNYNYYYY",
+                "YYNNYNYYYNYYNNNYYNNY",
+                "NNYNYNYYYNYYNYNNYNNN"}
+                ;
+        System.out.println(new OrderOfTheHats().minChanged(spellChart));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -554,7 +578,8 @@ public class Main {
 //        testBadSubstring();
 //        testDiceGames();
 //        testRoadReconstruction();
-        testSkewedPerspectives();
+//        testSkewedPerspectives();
+        testOrderOfTheHats();
     }
 
 }
