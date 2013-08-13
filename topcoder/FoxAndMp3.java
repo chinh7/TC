@@ -1,3 +1,5 @@
+package topcoder;
+
 import java.util.ArrayList;
 
 /**
@@ -18,7 +20,7 @@ public class FoxAndMp3 {
         }
     }
 
-    String[] playList(int n){
+    public String[] playList(int n){
         maxN=n;
         gen(1);
         String[] ret = new String[result.size()];

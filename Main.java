@@ -3,6 +3,8 @@ import topcoder.datastructure.UndoHistory;
 import topcoder.dp.*;
 import topcoder.graph.*;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chinh
@@ -530,6 +532,22 @@ public class Main {
                 ;
         System.out.println(new OrderOfTheHats().minChanged(spellChart));
     }
+    static void testMatrixGame(){
+        String[] matrix = {"11010100",
+                "11110001",
+                "00011101",
+                "11111111",
+                "01110100",
+                "10000110",
+                "00001001",
+                "11010111"}
+
+                ;
+        String[] result = new MatrixGame().getMinimal(matrix);
+        for(String s : result){
+            System.out.println(s);
+        }
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -579,7 +597,9 @@ public class Main {
 //        testDiceGames();
 //        testRoadReconstruction();
 //        testSkewedPerspectives();
-        testOrderOfTheHats();
+//        testOrderOfTheHats();
+        testMatrixGame();
+
     }
 
 }

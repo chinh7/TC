@@ -1,3 +1,5 @@
+package topcoder;
+
 import java.util.Arrays;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Arrays;
  * To change this template use File | Settings | File Templates.
  */
 public class TeamContest {
-    int worstRank(int[] strength){
+    public int worstRank(int[] strength){
         int n = strength.length;
         Arrays.sort(strength, 3, n);
         boolean[] done = new boolean[n];
