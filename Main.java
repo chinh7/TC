@@ -4,6 +4,7 @@ import topcoder.dp.*;
 import topcoder.graph.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -546,6 +547,16 @@ public class Main {
         int[] damage = {10,40,10,10,90,40,10};
         System.out.println(new SpellCardsEasy().maxDamage(level, damage));
     }
+    static void testMagicNaming(){
+        System.out.println(new MagicNaming().maxReindeers("zzzzz"));
+//        String[] a = {"k", "nuthm", "o", "r", "ri", "spra", "t", "t"};
+//        Arrays.sort(a);
+//        String ret = "";
+//        for(String s : a){
+//            ret+=s;
+//        }
+//        System.out.println(ret);
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -597,7 +608,8 @@ public class Main {
 //        testSkewedPerspectives();
 //        testOrderOfTheHats();
 //        testMatrixGame();
-        testSpellCardsEasy();
+//        testSpellCardsEasy();
+        testMagicNaming();
 
     }
 
