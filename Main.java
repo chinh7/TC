@@ -548,7 +548,7 @@ public class Main {
         System.out.println(new SpellCardsEasy().maxDamage(level, damage));
     }
     static void testMagicNaming(){
-        System.out.println(new MagicNaming().maxReindeers("zzzzz"));
+        System.out.println(new MagicNaming().maxReindeers("knuthmorrispratt"));
 //        String[] a = {"k", "nuthm", "o", "r", "ri", "spra", "t", "t"};
 //        Arrays.sort(a);
 //        String ret = "";

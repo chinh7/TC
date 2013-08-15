@@ -22,13 +22,8 @@ public class MagicNaming {
                         String start = source.substring(0,e);
                         String end = source.substring(e,source.length());
                         boolean valid = (start.compareTo(end)<=0);
-                        int ii=i-2, jj=j-2;
-                        while(ii>=0 && jj>=0){
-                            if(start.compareTo(build[ii][jj])<0){
-                                valid = false;
-                                break;
-                            }
-                            ii--; jj--;
+                        if(i>1 && j>1){
+                            valid = valid && (start.compareTo(build[i-2][j-2])>=0);
                         }
                         if(valid && (first==null || first.compareTo(end)>0)){
                             first = end;
