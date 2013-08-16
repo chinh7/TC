@@ -557,6 +557,10 @@ public class Main {
 //        }
 //        System.out.println(ret);
     }
+    static void testSafeRemoval(){
+        int[] seq = {1,1,1,1,1,1,3,5};
+        System.out.println(new SafeRemoval().removeThem(seq, 7));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -609,7 +613,8 @@ public class Main {
 //        testOrderOfTheHats();
 //        testMatrixGame();
 //        testSpellCardsEasy();
-        testMagicNaming();
+//        testMagicNaming();
+        testSafeRemoval();
 
     }
 
