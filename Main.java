@@ -558,8 +558,14 @@ public class Main {
 //        System.out.println(ret);
     }
     static void testSafeRemoval(){
-        int[] seq = {1,1,1,1,1,1,3,5};
-        System.out.println(new SafeRemoval().removeThem(seq, 7));
+        int[] seq = {7,4,4};
+        System.out.println(new SafeRemoval().removeThem(seq, 2));
+    }
+    static void testMagicalSquare(){
+        String[] rowStrings = {"aa", "a", "aa"};
+        String[] colStrings = {"aa", "a", "aa"};
+        System.out.println(new MagicalSquare().getCount(rowStrings, colStrings));
+
     }
     public static void main(String[] args){
 //        testPenLift();
@@ -614,7 +620,8 @@ public class Main {
 //        testMatrixGame();
 //        testSpellCardsEasy();
 //        testMagicNaming();
-        testSafeRemoval();
+//        testSafeRemoval();
+        testMagicalSquare();
 
     }
 
