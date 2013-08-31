@@ -567,6 +567,11 @@ public class Main {
         System.out.println(new MagicalSquare().getCount(rowStrings, colStrings));
 
     }
+    static void testGalaxyTrip(){
+        String[] dependencies = {"4 2", "3", "0 4", "1", "0 2", "6", "5"};
+        int[] result = new GalaxyTrip().possibleValues(dependencies);
+        for(int size : result) System.out.println(size+" ");
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -621,7 +626,8 @@ public class Main {
 //        testSpellCardsEasy();
 //        testMagicNaming();
 //        testSafeRemoval();
-        testMagicalSquare();
+//        testMagicalSquare();
+        testGalaxyTrip();
 
     }
 
