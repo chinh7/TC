@@ -572,6 +572,11 @@ public class Main {
         int[] result = new GalaxyTrip().possibleValues(dependencies);
         for(int size : result) System.out.println(size+" ");
     }
+    static void testTheTree(){
+        int[] cnt = {4, 2, 1, 3, 2, 5, 7, 2, 4, 5, 2, 3, 1, 13, 6};
+
+        System.out.println(new TheTree().maximumDiameter(cnt));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -627,7 +632,8 @@ public class Main {
 //        testMagicNaming();
 //        testSafeRemoval();
 //        testMagicalSquare();
-        testGalaxyTrip();
+//        testGalaxyTrip();
+        testTheTree();
 
     }
 
