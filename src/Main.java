@@ -577,6 +577,12 @@ public class Main {
 
         System.out.println(new TheTree().maximumDiameter(cnt));
     }
+
+    static void testYetAnotherTwoTeamsProblem(){
+        int[] skill = {999, 999, 999, 1000, 1000, 1001, 999, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
+                1000, 1000, 1000, 999, 1000, 512, 511, 1001, 1001, 1001, 1001, 1001, 1000};
+        System.out.println(new YetAnotherTwoTeamsProblem().count(skill));
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -633,7 +639,8 @@ public class Main {
 //        testSafeRemoval();
 //        testMagicalSquare();
 //        testGalaxyTrip();
-        testTheTree();
+//        testTheTree();
+        testYetAnotherTwoTeamsProblem();
 
     }
 
