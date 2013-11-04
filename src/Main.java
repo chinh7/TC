@@ -1,3 +1,5 @@
+import codechef.Bar;
+import codechef.Lebamboo;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.*;
@@ -5,6 +7,7 @@ import topcoder.graph.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -590,6 +593,30 @@ public class Main {
         System.out.println(new MayTheBestPetWin().calc(A, B));
     }
 
+    static void testFlippingBitsDiv2(){
+        String[] S = {"00010","11010110","1010111","110001010","0110001100"
+                ,"000110110","011010101","00","111","100"};
+        System.out.println(new FlippingBitsDiv2().getmin(S, 13));
+    }
+
+    static void quicksort(int[] array, int left, int right){
+        if(left>=right) return;
+        int pivot = array[left+ (int)Math.random()*(right-left+1)];
+        int l = left, r = right;
+        while(l<=r){
+            while(array[l]<pivot) l++;
+            while(array[r]>pivot) r--;
+            if(l<=r){
+                int tmp = array[l];
+                array[l] = array[r];
+                array[r] = tmp;
+                l++; r--;
+            }
+        };
+        quicksort(array, left, r);
+        quicksort(array, l, right);
+    }
+
     static void testThreeColorabilityEasy(){
         String[] cells = {"ZZ"
                 ,"ZZ"};
@@ -656,7 +683,14 @@ public class Main {
 //        testYetAnotherTwoTeamsProblem();
 //        testMayTheBestPetWin();
 //        testThreeColorabilityEasy();
-        Randomness.exec();
+//        testFlippingBitsDiv2();
+//        Randomness.exec();
+
+        try{
+            Bar.main();
+        } catch (Exception e){
+
+        }
 
     }
 
