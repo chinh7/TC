@@ -1,3 +1,4 @@
+import codechef.Bar;
 import codechef.Lebamboo;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
@@ -678,7 +679,7 @@ public class Main {
 //        Randomness.exec();
 
         try{
-            Lebamboo.main();
+            Bar.main();
         } catch (Exception e){
 
         }
