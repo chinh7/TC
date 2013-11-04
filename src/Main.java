@@ -1,3 +1,4 @@
+import codechef.Lebamboo;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.*;
@@ -5,6 +6,7 @@ import topcoder.graph.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -589,6 +591,30 @@ public class Main {
         int[] B = {7296,6954,4407,9724,8645,8065,9323,8433,1352,9618,6487,7309,9297,8999,9960,5653,4721,7623,6017,7320,3513,6642,6359,3145,7233,5077,6457,3605,2911,4679,5381,6574};
         System.out.println(new MayTheBestPetWin().calc(A, B));
     }
+
+    static void testFlippingBitsDiv2(){
+        String[] S = {"00010","11010110","1010111","110001010","0110001100"
+                ,"000110110","011010101","00","111","100"};
+        System.out.println(new FlippingBitsDiv2().getmin(S, 13));
+    }
+
+    static void quicksort(int[] array, int left, int right){
+        if(left>=right) return;
+        int pivot = array[left+ (int)Math.random()*(right-left+1)];
+        int l = left, r = right;
+        while(l<=r){
+            while(array[l]<pivot) l++;
+            while(array[r]>pivot) r--;
+            if(l<=r){
+                int tmp = array[l];
+                array[l] = array[r];
+                array[r] = tmp;
+                l++; r--;
+            }
+        };
+        quicksort(array, left, r);
+        quicksort(array, l, right);
+    }
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -647,7 +673,15 @@ public class Main {
 //        testGalaxyTrip();
 //        testTheTree();
 //        testYetAnotherTwoTeamsProblem();
-        testMayTheBestPetWin();
+//        testMayTheBestPetWin();
+//        testFlippingBitsDiv2();
+//        Randomness.exec();
+
+        try{
+            Lebamboo.main();
+        } catch (Exception e){
+
+        }
 
     }
 
