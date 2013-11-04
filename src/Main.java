@@ -1,4 +1,5 @@
 import codechef.Bar;
+import codechef.Delish;
 import codechef.Lebamboo;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
@@ -687,7 +688,7 @@ public class Main {
 //        Randomness.exec();
 
         try{
-            Bar.main();
+            Delish.main();
         } catch (Exception e){
 
         }
