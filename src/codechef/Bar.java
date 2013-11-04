@@ -41,12 +41,32 @@ public class Bar {
                 }
             }
             Collections.sort(list);
-            int[] lastIndex = new int[n];
+            int[] lastLoc = new int[n];
+            int[] firstLoc = new int[n];
+            Arrays.fill(firstLoc,-1);
             for(int i=0; i<list.size(); i++){
                 int index = list.get(i).index;
-                lastIndex[index] = i;
+                lastLoc[index] = i;
+                if(firstLoc[index]<0) firstLoc[index] = i;
             }
             boolean[] track = new boolean[n];
+            int[] log = new int[list.size()];
+            for(int i=1; i<list.size(); i++){
+                int total = 0;
+                int addedIndex = list.get(i-1).index;
+                int removedIndex = list.get(i).index;
+                log[i] = log[i-1];
+                if(addedIndex == removedIndex){
+                    continue;
+                }
+                if(firstLoc[removedIndex]<i-1 && lastLoc[removedIndex]>i-1){
+                    log[i]--;
+                }
+                if(lastLoc[addedIndex]>i) log[i]++;
+
+            }
+
+            track = new boolean[n];
             int count = 0;
             int result = 0;
             for(int i=0; i<list.size(); i++){
@@ -58,11 +78,11 @@ public class Bar {
                     }
                     if(count>k-1){
                         int diff = count-k+1;
-                        for(int j=0; j<n; j++){
-                            if(track[j] && lastIndex[j]>i) diff--;
-                            if(diff == 0) break;
-                        }
-                        if(diff==0){
+//                        for(int j=0; j<n; j++){
+//                            if(track[j] && lastLoc[j]>i) diff--;
+//                            if(diff == 0) break;
+//                        }
+                        if(log[i]>=diff){
                             result++;
                             System.out.print(list.get(i).value+" ");
                         }
@@ -76,11 +96,11 @@ public class Bar {
                     }
                     if(count>k){
                         int diff = count-k;
-                        for(int j=0; j<n; j++){
-                            if(j!=index && track[j] && lastIndex[j]>i) diff--;
-                            if(diff == 0) break;
-                        }
-                        if(diff==0){
+//                        for(int j=0; j<n; j++){
+//                            if(j!=index && track[j] && lastLoc[j]>i) diff--;
+//                            if(diff == 0) break;
+//                        }
+                        if(log[i]>=diff){
                             result++;
                             System.out.print(list.get(i).value+" ");
                         }
