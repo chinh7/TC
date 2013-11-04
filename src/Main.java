@@ -589,6 +589,13 @@ public class Main {
         int[] B = {7296,6954,4407,9724,8645,8065,9323,8433,1352,9618,6487,7309,9297,8999,9960,5653,4721,7623,6017,7320,3513,6642,6359,3145,7233,5077,6457,3605,2911,4679,5381,6574};
         System.out.println(new MayTheBestPetWin().calc(A, B));
     }
+
+    static void testThreeColorabilityEasy(){
+        String[] cells = {"ZZ"
+                ,"ZZ"};
+        System.out.println(new ThreeColorabilityEasy().isColorable(cells));
+    }
+
     public static void main(String[] args){
 //        testPenLift();
 //        testUndoHistory();
@@ -647,7 +654,9 @@ public class Main {
 //        testGalaxyTrip();
 //        testTheTree();
 //        testYetAnotherTwoTeamsProblem();
-        testMayTheBestPetWin();
+//        testMayTheBestPetWin();
+//        testThreeColorabilityEasy();
+        Randomness.exec();
 
     }
 
