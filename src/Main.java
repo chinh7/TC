@@ -689,7 +689,7 @@ public class Main {
 //        Randomness.exec();
 
         try{
-            Kingcon.main();
+            Randomness.exec();
         } catch (Exception e){
 
         }

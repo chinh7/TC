@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
@@ -104,9 +106,47 @@ public class Randomness {
         long[] result = {max, lBest, rBest};
         return result;
     }
+
+    static final int MAXN = 20;
+    static Integer[] RA, SA, LCP, FC, SC;
+    static int step, n;
+
+    static class CustomComparator implements Comparator<Integer> {
+        @Override
+        public int compare(Integer a, Integer b) {
+            if (step==-1 || FC[a]!=FC[b]) return FC[a] - FC[b];
+            if(a+(1<<step)>=n || b+(1<<step)>=n) System.out.println("overflow");
+            return FC[a+(1<<step)] - FC[b+(1<<step)];
+        }
+
+    }
+    static void suffixArray(String s){
+        RA = new Integer[MAXN];
+        SA = new Integer[MAXN];
+        LCP = new Integer[MAXN];
+
+        n = s.length();
+        for(int i=0; i<n; i++) RA[i] = Integer.valueOf(s.charAt(i));
+        for(int i=0; i<n; i++) SA[i] = i;
+
+        CustomComparator comparator = new CustomComparator();
+        for(FC=RA, SC=LCP, step=-1; (1<<step)<n; step++){
+            Arrays.sort(SA, 0, n, comparator);
+            int cnt=0;
+            SC = new Integer[MAXN];
+            for (int i=0; i<n; i++) {
+                if (i>0 && comparator.compare(SA[i-1],SA[i])<0) cnt++;
+                SC[SA[i]] = cnt;
+            }
+            if (cnt==n-1) break;
+            FC = SC;
+        }
+        for (int i=0; i<n; i++) RA[SA[i]] = i;
+    }
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
 
+        suffixArray("bobocel");
     }
 }
