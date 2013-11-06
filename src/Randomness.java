@@ -107,7 +107,6 @@ public class Randomness {
         return result;
     }
 
-    static final int MAXN = 20;
     static Integer[] RA, SA, LCP, FC, SC;
     static int step, n;
 
@@ -115,25 +114,33 @@ public class Randomness {
         @Override
         public int compare(Integer a, Integer b) {
             if (step==-1 || FC[a]!=FC[b]) return FC[a] - FC[b];
-            if(a+(1<<step)>=n || b+(1<<step)>=n) System.out.println("overflow");
+            if(a+(1<<step)>=n){
+                return -1;
+            }
+            if(b+(1<<step)>=n){
+                return 1;
+            }
             return FC[a+(1<<step)] - FC[b+(1<<step)];
         }
 
     }
     static void suffixArray(String s){
-        RA = new Integer[MAXN];
-        SA = new Integer[MAXN];
-        LCP = new Integer[MAXN];
-
         n = s.length();
-        for(int i=0; i<n; i++) RA[i] = Integer.valueOf(s.charAt(i));
+
+        SA = new Integer[n]; //Suffix Array
+        RA = new Integer[n]; //SA inversed
+        LCP = new Integer[n];
+
+        FC = new Integer[n]; //for comparison
+
+        for(int i=0; i<n; i++) FC[i] = Integer.valueOf(s.charAt(i));
         for(int i=0; i<n; i++) SA[i] = i;
 
         CustomComparator comparator = new CustomComparator();
-        for(FC=RA, SC=LCP, step=-1; (1<<step)<n; step++){
+        for(step=-1; (1<<step)<n; step++){
             Arrays.sort(SA, 0, n, comparator);
             int cnt=0;
-            SC = new Integer[MAXN];
+            SC = new Integer[n];
             for (int i=0; i<n; i++) {
                 if (i>0 && comparator.compare(SA[i-1],SA[i])<0) cnt++;
                 SC[SA[i]] = cnt;
@@ -143,23 +150,27 @@ public class Randomness {
         }
         for (int i=0; i<n; i++) RA[SA[i]] = i;
 
-
         int l = 0;
         for(int i=0; i<n; i++){
-            int k = SC[i];
+            int k = RA[i];
             if(k==0) continue;
             int j = SA[k-1];
-            while(s.charAt(i+l) == s.charAt(j+l)) l++;
+            while(i+l<n && j+l<n && s.charAt(i+l) == s.charAt(j+l)) l++;
             LCP[k] = l;
             if(l>0) l--;
         }
-        l = 0;
+
+        int result = n-SA[0];
+        for(int i=1; i<n; i++){
+            result+=n-SA[i]-LCP[i];
+        }
+        System.out.println(result);
     }
 
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
 
-        suffixArray("bobocel");
+        suffixArray("abababababababababababababababababab");
     }
 }
