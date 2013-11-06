@@ -142,7 +142,20 @@ public class Randomness {
             FC = SC;
         }
         for (int i=0; i<n; i++) RA[SA[i]] = i;
+
+
+        int l = 0;
+        for(int i=0; i<n; i++){
+            int k = SC[i];
+            if(k==0) continue;
+            int j = SA[k-1];
+            while(s.charAt(i+l) == s.charAt(j+l)) l++;
+            LCP[k] = l;
+            if(l>0) l--;
+        }
+        l = 0;
     }
+
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
