@@ -11,6 +11,11 @@ import java.util.Arrays;
  * Time: 11:40 PM
  * To change this template use File | Settings | File Templates.
  */
+
+/**
+ * (1x1+2x2+3x3+4x4)/(x1+x2+x3+x4) = 2.5
+ * -> 1.5x1 + 0.5x2 = 0.5x3 + 1.5x4 :)
+ */
 public class Staves {
     static int sum(int[] numbers, int i, int j){
         int result = 0;

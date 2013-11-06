@@ -1,7 +1,4 @@
-import codechef.Bar;
-import codechef.Delish;
-import codechef.Lebamboo;
-import codechef.Staves;
+import codechef.*;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.*;
@@ -689,7 +686,7 @@ public class Main {
 //        Randomness.exec();
 
         try{
-            Staves.main();
+            RRGAME.main();
         } catch (Exception e){
 
         }
