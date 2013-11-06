@@ -1,5 +1,6 @@
 import codechef.Bar;
 import codechef.Delish;
+import codechef.Kingcon;
 import codechef.Lebamboo;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
@@ -688,7 +689,7 @@ public class Main {
 //        Randomness.exec();
 
         try{
-            Delish.main();
+            Kingcon.main();
         } catch (Exception e){
 
         }
