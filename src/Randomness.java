@@ -1,11 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.StringTokenizer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -107,70 +100,19 @@ public class Randomness {
         return result;
     }
 
-    static Integer[] RA, SA, LCP, FC, SC;
-    static int step, n;
-
-    static class CustomComparator implements Comparator<Integer> {
-        @Override
-        public int compare(Integer a, Integer b) {
-            if (step==-1 || FC[a]!=FC[b]) return FC[a] - FC[b];
-            if(a+(1<<step)>=n){
-                return -1;
-            }
-            if(b+(1<<step)>=n){
-                return 1;
-            }
-            return FC[a+(1<<step)] - FC[b+(1<<step)];
-        }
-
-    }
-    static void suffixArray(String s){
-        n = s.length();
-
-        SA = new Integer[n]; //Suffix Array
-        RA = new Integer[n]; //SA inversed
-        LCP = new Integer[n];
-
-        FC = new Integer[n]; //for comparison
-
-        for(int i=0; i<n; i++) FC[i] = Integer.valueOf(s.charAt(i));
-        for(int i=0; i<n; i++) SA[i] = i;
-
-        CustomComparator comparator = new CustomComparator();
-        for(step=-1; (1<<step)<n; step++){
-            Arrays.sort(SA, 0, n, comparator);
-            int cnt=0;
-            SC = new Integer[n];
-            for (int i=0; i<n; i++) {
-                if (i>0 && comparator.compare(SA[i-1],SA[i])<0) cnt++;
-                SC[SA[i]] = cnt;
-            }
-            if (cnt==n-1) break;
-            FC = SC;
-        }
-        for (int i=0; i<n; i++) RA[SA[i]] = i;
-
-        int l = 0;
-        for(int i=0; i<n; i++){
-            int k = RA[i];
-            if(k==0) continue;
-            int j = SA[k-1];
-            while(i+l<n && j+l<n && s.charAt(i+l) == s.charAt(j+l)) l++;
-            LCP[k] = l;
-            if(l>0) l--;
-        }
-
-        int result = n-SA[0];
-        for(int i=1; i<n; i++){
-            result+=n-SA[i]-LCP[i];
-        }
-        System.out.println(result);
-    }
 
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
-
-        suffixArray("abababababababababababababababababab");
+        SuffixArrayFactory saf = new SuffixArrayFactory("abab");
+        Integer[] sa = saf.getSuffixArray();
+        Integer[] lcp = saf.getLCP();
+        int result = 0;
+        int n = sa.length;
+        result = n-sa[0];
+        for(int i=1; i<n; i++){
+            result+=n-sa[i]-lcp[i];
+        }
+        System.out.println(result);
     }
 }

@@ -624,6 +624,10 @@ public class Main {
                 ,"ZZ"};
         System.out.println(new ThreeColorabilityEasy().isColorable(cells));
     }
+    static void testP8XCoinChangeAnother(){
+        long[] result = new P8XCoinChangeAnother().solve(	58, 344845910552782105l, 198219266);
+        for(long count : result) System.out.print(count+", ");
+    }
 
     public static void main(String[] args){
 //        testPenLift();
@@ -686,10 +690,11 @@ public class Main {
 //        testMayTheBestPetWin();
 //        testThreeColorabilityEasy();
 //        testFlippingBitsDiv2();
-//        Randomness.exec();
+        testP8XCoinChangeAnother();
+
 
         try{
-            Randomness.exec();
+//            Randomness.exec();
         } catch (Exception e){
 
         }
