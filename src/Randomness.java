@@ -1,9 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.StringTokenizer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -104,9 +99,20 @@ public class Randomness {
         long[] result = {max, lBest, rBest};
         return result;
     }
+
+
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
-
+        SuffixArrayFactory saf = new SuffixArrayFactory("abab");
+        Integer[] sa = saf.getSuffixArray();
+        Integer[] lcp = saf.getLCP();
+        int result = 0;
+        int n = sa.length;
+        result = n-sa[0];
+        for(int i=1; i<n; i++){
+            result+=n-sa[i]-lcp[i];
+        }
+        System.out.println(result);
     }
 }
