@@ -691,7 +691,7 @@ public class Main {
 
 
         try{
-            SPOONS.main();
+            TKCHOCS.main();
         } catch (Exception e){
 
         }
