@@ -691,7 +691,7 @@ public class Main {
 
 
         try{
-            STRDIG.main();
+            SPOONS.main();
         } catch (Exception e){
 
         }

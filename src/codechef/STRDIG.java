@@ -63,7 +63,18 @@ public class STRDIG {
         return "NO";
     }
     public static void main() throws Exception{
-        System.out.println(solve("000000599000001"));
+        int start = 0;
+        int stop  = 1339;
+        int cutStart = 0;
+        int cutStop = 73;
+        String s = "";
+        for(int i=start; i<=stop; i++){
+            s = s+String.valueOf(i);
+        }
+        s = s.substring(cutStart, s.length());
+        s = s.substring(0, s.length()-cutStop);
+        System.out.println(solve(s));
+
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        int T = Integer.parseInt(br.readLine());
 //        while(T-- > 0){
