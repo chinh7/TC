@@ -1,7 +1,4 @@
-import codechef.Bar;
-import codechef.Delish;
-import codechef.Kingcon;
-import codechef.Lebamboo;
+import codechef.*;
 import topcoder.*;
 import topcoder.datastructure.UndoHistory;
 import topcoder.dp.*;
@@ -690,11 +687,11 @@ public class Main {
 //        testMayTheBestPetWin();
 //        testThreeColorabilityEasy();
 //        testFlippingBitsDiv2();
-        testP8XCoinChangeAnother();
+//        testP8XCoinChangeAnother();
 
 
         try{
-//            Randomness.exec();
+            TKCHOCS.main();
         } catch (Exception e){
 
         }
