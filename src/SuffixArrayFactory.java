@@ -54,7 +54,7 @@ public class SuffixArrayFactory {
 
         int l = 0;
         for(int i=0; i<n; i++){
-            int k = RA[i];
+            int k = RA[i]; //SA[k]=i
             if(k==0) continue;
             int j = SA[k-1];
             while(i+l<n && j+l<n && s.charAt(i+l) == s.charAt(j+l)) l++;

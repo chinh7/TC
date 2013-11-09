@@ -1,6 +1,6 @@
 import codechef.*;
 import topcoder.*;
-import topcoder.datastructure.UndoHistory;
+import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
 
@@ -691,7 +691,7 @@ public class Main {
 
 
         try{
-            TKCHOCS.main();
+            STREGGS.main();
         } catch (Exception e){
 
         }
