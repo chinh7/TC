@@ -1,4 +1,5 @@
 import codechef.*;
+import spoj.EZDIJKST;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
@@ -625,6 +626,9 @@ public class Main {
         long[] result = new P8XCoinChangeAnother().solve(	58, 344845910552782105l, 198219266);
         for(long count : result) System.out.print(count+", ");
     }
+    static void testStringWeightDiv2(){
+        System.out.println(new StringWeightDiv2().countMinimums(1000));
+    }
 
     public static void main(String[] args){
 //        testPenLift();
@@ -689,11 +693,13 @@ public class Main {
 //        testFlippingBitsDiv2();
 //        testP8XCoinChangeAnother();
 
+        testStringWeightDiv2();
 
         try{
-            STREGGS.main();
+//            Randomness.exec();
+//            CHEFGM.main();
         } catch (Exception e){
-
+            System.out.print(e.toString());
         }
 
     }
