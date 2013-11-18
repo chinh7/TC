@@ -115,6 +115,29 @@ public class Randomness {
     }
 
 
+    static void merge(int[] a, int left, int mid, int right){
+        int[] tmp = new int[right-left+1];
+        int lc = left, rc = mid+1;
+        for(int i=0; i<right-left+1; i++){
+            if(rc>right || (lc<=mid && a[lc]<=a[rc])){
+                tmp[i] = a[lc];
+                lc++;
+            } else{
+                tmp[i] = a[rc];
+                rc++;
+            }
+        }
+        for(int i=left; i<=right; i++){
+            a[i] = tmp[i-left];
+        }
+    }
+    static void mergeSort(int[] a, int left, int right){
+        if(left>=right) return;
+        int mid = (left+right)/2;
+        mergeSort(a, left, mid);
+        mergeSort(a, mid+1, right);
+        merge(a, left, mid, right);
+    }
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
@@ -128,6 +151,28 @@ public class Randomness {
 //            result+=n-sa[i]-lcp[i];
 //        }
 //        System.out.println(result);
-        System.out.println(isSubString("bat", "abeat"));
+
+//        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
+//        mergeSort(a, 0, a.length-1);
+//        for(int i=0; i<a.length; i++) System.out.println(a[i]);
+
+        int[] a = {5,1,7,5,0,1,2,3,2};
+//        Arrays.sort(a);
+//        int slot = 0;
+//
+//        for(int i=0; i<a.length; i++){
+//            if(i==a.length-1 || a[i]!=a[i+1]) a[slot++] = a[i];
+//        }
+//        for(int i=0; i<slot; i++) System.out.print(a[i]+ " ");
+//        System.out.println();
+        int pos = 0;
+        for(int i=0; i<a.length; i++){
+            boolean valid = true;
+            for(int j=i-1; j>=0; j--){
+                if(a[i]==a[j]) valid=false;
+            }
+            if(valid) a[pos++]=a[i];
+        }
+        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
     }
 }
