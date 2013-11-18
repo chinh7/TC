@@ -4,6 +4,8 @@ import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
+import usaco.CowRun;
+import usaco.Partition;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -699,10 +701,10 @@ public class Main {
 //        testFlippingBitsDiv2();
 //        testP8XCoinChangeAnother();
 //        testStringWeightDiv2();
-        testExcavations2();
+//        testExcavations2();
 
-//            Randomness.exec();
-            CowRun.main(args);
+//        Randomness.exec();
+        Partition.main(args);
 
     }
 
