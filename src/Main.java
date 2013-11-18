@@ -636,7 +636,7 @@ public class Main {
         System.out.println(new Excavations2().count(kind, found, K));
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
 //        testPenLift();
 //        testUndoHistory();
 //        testTravellingPurchasingMan();
@@ -701,12 +701,8 @@ public class Main {
 //        testStringWeightDiv2();
         testExcavations2();
 
-        try{
 //            Randomness.exec();
-//            CHEFGM.main();
-        } catch (Exception e){
-            System.out.print(e.toString());
-        }
+            CowRun.main(args);
 
     }
 

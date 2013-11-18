@@ -1,6 +1,4 @@
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * Created with IntelliJ IDEA.
@@ -101,6 +99,22 @@ public class Randomness {
         long[] result = {max, lBest, rBest};
         return result;
     }
+
+    static boolean isSubString(String x, String s){
+        for(int i=0; i<s.length()-x.length()+1; i++){
+            boolean matched = true;
+            for(int j=0; j<x.length(); j++){
+                if(x.charAt(j)!=s.charAt(j+i)){
+                    matched = false;
+                    break;
+                }
+            }
+            if(matched) return true;
+        }
+        return false;
+    }
+
+
     static void merge(int[] a, int left, int mid, int right){
         int[] tmp = new int[right-left+1];
         int lc = left, rc = mid+1;
