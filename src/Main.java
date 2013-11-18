@@ -629,6 +629,12 @@ public class Main {
     static void testStringWeightDiv2(){
         System.out.println(new StringWeightDiv2().countMinimums(1000));
     }
+    static void testExcavations2(){
+        int[] kind = {1, 2, 1, 1, 2, 3, 4, 3, 2, 2};
+        int[] found = {4,2};
+        int K = 3;
+        System.out.println(new Excavations2().count(kind, found, K));
+    }
 
     public static void main(String[] args){
 //        testPenLift();
@@ -692,8 +698,8 @@ public class Main {
 //        testThreeColorabilityEasy();
 //        testFlippingBitsDiv2();
 //        testP8XCoinChangeAnother();
-
-        testStringWeightDiv2();
+//        testStringWeightDiv2();
+        testExcavations2();
 
         try{
 //            Randomness.exec();
