@@ -3,6 +3,9 @@ import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
+import usaco.CowRun;
+import usaco.Empty;
+import usaco.NoChange;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -626,7 +629,7 @@ public class Main {
         for(long count : result) System.out.print(count+", ");
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
 //        testPenLift();
 //        testUndoHistory();
 //        testTravellingPurchasingMan();
@@ -690,11 +693,8 @@ public class Main {
 //        testP8XCoinChangeAnother();
 
 
-        try{
-            STREGGS.main();
-        } catch (Exception e){
-
-        }
+//            Randomness.exec();
+            CowRun.main(args);
 
     }
 

@@ -100,19 +100,34 @@ public class Randomness {
         return result;
     }
 
+    static boolean isSubString(String x, String s){
+        for(int i=0; i<s.length()-x.length()+1; i++){
+            boolean matched = true;
+            for(int j=0; j<x.length(); j++){
+                if(x.charAt(j)!=s.charAt(j+i)){
+                    matched = false;
+                    break;
+                }
+            }
+            if(matched) return true;
+        }
+        return false;
+    }
+
 
     public static void exec(){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
-        SuffixArrayFactory saf = new SuffixArrayFactory("abab");
-        Integer[] sa = saf.getSuffixArray();
-        Integer[] lcp = saf.getLCP();
-        int result = 0;
-        int n = sa.length;
-        result = n-sa[0];
-        for(int i=1; i<n; i++){
-            result+=n-sa[i]-lcp[i];
-        }
-        System.out.println(result);
+//        SuffixArrayFactory saf = new SuffixArrayFactory("abab");
+//        Integer[] sa = saf.getSuffixArray();
+//        Integer[] lcp = saf.getLCP();
+//        int result = 0;
+//        int n = sa.length;
+//        result = n-sa[0];
+//        for(int i=1; i<n; i++){
+//            result+=n-sa[i]-lcp[i];
+//        }
+//        System.out.println(result);
+        System.out.println(isSubString("bat", "abeat"));
     }
 }
