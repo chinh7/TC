@@ -5,6 +5,8 @@ import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
 import usaco.CowRun;
+import usaco.Lineup;
+import usaco.Msched;
 import usaco.Partition;
 
 import java.util.ArrayList;
@@ -704,7 +706,7 @@ public class Main {
 //        testExcavations2();
 
 //        Randomness.exec();
-        Partition.main(args);
+        Lineup.main(args);
 
     }
 
