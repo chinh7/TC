@@ -11,6 +11,10 @@ import java.util.StringTokenizer;
  * Time: 1:20 AM
  * To change this template use File | Settings | File Templates.
  */
+
+//follow-up: idea is right, execution is wrong.
+//e.g ok() check for 1,2,5 and for 1,2,3,5 is calculated separately.
+//if the result for the first is remembered, each check for ok() only run O(k) :)
 public class NoChange {
     static int k,n,total,chosenTotal,result=-1;
     static int[] candidates, sum;

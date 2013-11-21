@@ -13,7 +13,7 @@ import java.util.TreeMap;
  * Time: 11:02 PM
  * To change this template use File | Settings | File Templates.
  */
-
+//follow-up: a much more elegant sol provided by usaco.
 public class Empty {
     private static TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
     private static int n;
