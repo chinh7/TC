@@ -4,10 +4,7 @@ import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
-import usaco.CowRun;
-import usaco.Lineup;
-import usaco.Msched;
-import usaco.Partition;
+import usaco.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -639,6 +636,9 @@ public class Main {
         int K = 3;
         System.out.println(new Excavations2().count(kind, found, K));
     }
+    static void testLittleElephantAndSubset(){
+        System.out.println(new LittleElephantAndSubset().getNumber(4777447));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -704,9 +704,9 @@ public class Main {
 //        testP8XCoinChangeAnother();
 //        testStringWeightDiv2();
 //        testExcavations2();
-
+        testLittleElephantAndSubset();
 //        Randomness.exec();
-        Lineup.main(args);
+//        Mroute.main(args);
 
     }
 
