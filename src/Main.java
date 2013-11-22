@@ -639,6 +639,11 @@ public class Main {
     static void testLittleElephantAndSubset(){
         System.out.println(new LittleElephantAndSubset().getNumber(4777447));
     }
+    static void testAstronomicalRecords(){
+        int[] A = {1,2,3,4,5,6,7,8,9};
+        int[] B = {6,7,8,9,10,11,12};
+        System.out.println(new AstronomicalRecords().minimalPlanets(A,B));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -704,7 +709,8 @@ public class Main {
 //        testP8XCoinChangeAnother();
 //        testStringWeightDiv2();
 //        testExcavations2();
-        testLittleElephantAndSubset();
+//        testLittleElephantAndSubset();
+        testAstronomicalRecords();
 //        Randomness.exec();
 //        Mroute.main(args);
 
