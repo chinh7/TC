@@ -1,14 +1,8 @@
-import codechef.*;
-import spoj.EZDIJKST;
+import codechef.MMATCH;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
-import usaco.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -645,6 +639,27 @@ public class Main {
         System.out.println(new AstronomicalRecords().minimalPlanets(A,B));
     }
 
+    static void testIncrementAndDoubling(){
+        int[] a = {7,5,8,1,8,6,6,5,3,5,5,2,8,9,9,4,6,9,4,4,1,9,9,2,8,4,7,4,8,8,6,3,9,4,3,4,5,1,9,8,3,8,3,7,9,3,8,4,4,7};
+        System.out.print(new IncrementAndDoubling().getMin(a));
+    }
+    static void testHexagonalBoard(){
+        String[] board = {"---",
+                "XXX",
+                "-XX"}
+                ;
+        System.out.println(new HexagonalBoard().minColors(board));
+    }
+    static void testScoringSystems(){
+        int[] c = {6, 6, 6, 6, 6, 8, 8, 8, 8, 8};
+        int[] s = {5, 5, 5, 5, 5, 7, 7, 7, 7, 7};
+        System.out.println(new ScoringSystems().isEquivalent(c,s));
+    }
+    static void testPackingSquares(){
+        int[] a = {0,0,0};
+        System.out.println(new PackingSquares().leastArea(a));
+    }
+
     public static void main(String[] args) throws Exception{
 //        testPenLift();
 //        testUndoHistory();
@@ -710,9 +725,14 @@ public class Main {
 //        testStringWeightDiv2();
 //        testExcavations2();
 //        testLittleElephantAndSubset();
-        testAstronomicalRecords();
+//        testIncrementAndDoubling();
+//        testAstronomicalRecords();
+//        testHexagonalBoard();
+//        testScoringSystems();
 //        Randomness.exec();
+//        testPackingSquares();
 //        Mroute.main(args);
+        MMATCH.main(args);
 
     }
 
