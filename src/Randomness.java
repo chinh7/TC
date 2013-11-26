@@ -114,7 +114,6 @@ public class Randomness {
         return false;
     }
 
-
     static void merge(int[] a, int left, int mid, int right){
         int[] tmp = new int[right-left+1];
         int lc = left, rc = mid+1;
