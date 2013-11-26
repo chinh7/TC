@@ -40,25 +40,21 @@ public class Nov1 {
 
 
     public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new FileReader("Nov1.in"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
         for(int tCase=0; tCase<T; tCase++){
             boolean yes = true;
             System.out.println("Case #"+(tCase+1));
 
             int n = Integer.parseInt(br.readLine());
-            if(n%2==1){
-                System.out.println("NO");
-                continue;
-            }
-            if(n>1000){
-                System.out.println("YES");
-                continue;
-            }
             Point[] points = new Point[n];
             for(int i=0; i<n; i++){
                 StringTokenizer st = new StringTokenizer(br.readLine());
                 points[i] = new Point(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
+            }
+            if(n%2==1){
+                System.out.println("NO");
+                continue;
             }
             Arrays.sort(points, new Comparator<Point>() {
                 @Override

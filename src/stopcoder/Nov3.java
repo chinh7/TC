@@ -22,8 +22,8 @@ public class Nov3 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
-        TreeSet<Integer> set = new TreeSet<Integer>();
         for(int tCase=0; tCase<T; tCase++){
+            System.out.println("Case #"+(tCase+1));
             int n = Integer.parseInt(br.readLine());
             Pair[] a = new Pair[n];
             int[] result = new int[n];
@@ -32,7 +32,7 @@ public class Nov3 {
                 a[i] = new Pair(i, Integer.parseInt(st.nextToken()));
             }
             Arrays.sort(a);
-            set.clear();
+            TreeSet<Integer> set = new TreeSet<Integer>();
             set.add(-n); set.add(2*n);
             for(int i=n-1; i>=0; i--){
                 int index = a[i].index;
@@ -43,9 +43,14 @@ public class Nov3 {
                 } else{
                     result[index] = floor;
                 }
-                if(i>0 && a[i].value>a[i-1].value) set.add(index);
+                if(i>0 && a[i].value>a[i-1].value){
+                    int j = i;
+                    while(j<n && a[j].value==a[i].value){
+                        set.add(a[j].index);
+                        j++;
+                    }
+                }
             }
-            System.out.println("Case #"+(tCase+1));
             for(int i=0; i<n; i++){
                 if(i<n-1) System.out.print(result[i]+" "); else System.out.println(result[i]);
             }
