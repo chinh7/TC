@@ -628,6 +628,18 @@ public class Main {
         long[] result = new P8XCoinChangeAnother().solve(	58, 344845910552782105l, 198219266);
         for(long count : result) System.out.print(count+", ");
     }
+    static void testLittleElephantAndArray(){
+        System.out.println(new LittleElephantAndArray().getNumber(6878542150015L,74));
+    }
+    static void testMuddyRoad2(){
+//        for(int i=5; i<=10; i++){
+//            for(int j=1; j<=i-2; j++){
+//                System.out.print(i+","+j+": ");
+//                new MuddyRoad2().theCount(i,j);
+//            }
+//        }
+        System.out.println(new MuddyRoad2().theCount(314,78));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -691,11 +703,11 @@ public class Main {
 //        testThreeColorabilityEasy();
 //        testFlippingBitsDiv2();
 //        testP8XCoinChangeAnother();
-
+//          testLittleElephantAndArray();
 
 //            Randomness.exec();
-            CowRun.main(args);
-
+//        CowRun.main(args);
+          testMuddyRoad2();
     }
 
 }
