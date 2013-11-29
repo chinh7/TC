@@ -742,8 +742,6 @@ public class Main {
 //        MMATCH.main(args);
 //        new Nov3().main(args);
 //        testKingdomAndPassword();
-        int[] a = {101, 200, 101, 101, 101, 101, 200, 101, 200};
-        System.out.println(new BinPackingEasy().minBins(a));
     }
 
 }
