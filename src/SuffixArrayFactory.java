@@ -50,8 +50,24 @@ public class SuffixArrayFactory {
             if (cnt==n-1) break;
             FC = SC;
         }
-        for (int i=0; i<n; i++) RA[SA[i]] = i;
 
+
+        //Compute LCP
+        //e.g ababa
+        /**
+         * i v -> SA
+         * v i -> RA
+         * 0 4 a
+         * 1 2 aba
+         * 2 0 ababa
+         * 3 3 ba
+         * 4 1 baba
+         * first comparison is btw ababa&aba
+         * -> LCP[2] = 3 = l
+         * second comparison is btw baba&ba
+         * LCP[4] is at least 3-1 because prev comparison
+         */
+        for (int i=0; i<n; i++) RA[SA[i]] = i;
         int l = 0;
         for(int i=0; i<n; i++){
             int k = RA[i]; //SA[k]=i

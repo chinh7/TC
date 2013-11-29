@@ -18,6 +18,7 @@ public class StringWeightDiv2 {
     public long countMinimums(int L){
         long[][] dp = new long[N+1][L+1];
         dp[0][0] = 1;
+        //dp[2][5] -> number of sols x1+x2=5 has xi>0
         for(int i=1; i<=N; i++){
             //goes through all the slots
             for(int total=i; total<=L-(N-i); total++){
