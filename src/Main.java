@@ -661,6 +661,11 @@ public class Main {
         int[] a = {0,0,0};
         System.out.println(new PackingSquares().leastArea(a));
     }
+    static void testKingdomAndPassword(){
+        long oldPassword = 2415293635734637L;
+        int[] restricted = {1, 4, 5, 7, 3, 9, 8, 1, 7, 6, 3, 2, 6, 4, 5, 7};
+        System.out.println(new KingdomAndPassword().newPassword(oldPassword, restricted));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -735,8 +740,10 @@ public class Main {
 //        testPackingSquares();
 //        Mroute.main(args);
 //        MMATCH.main(args);
-        new Nov3().main(args);
-
+//        new Nov3().main(args);
+//        testKingdomAndPassword();
+        int[] a = {101, 200, 101, 101, 101, 101, 200, 101, 200};
+        System.out.println(new BinPackingEasy().minBins(a));
     }
 
 }
