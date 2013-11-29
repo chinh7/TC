@@ -633,7 +633,7 @@ public class Main {
 //                new MuddyRoad2().theCount(i,j);
 //            }
 //        }
-        System.out.println(new MuddyRoad2().theCount(314,78));
+        System.out.println(new MuddyRoad2().theCount(555,222));
     }
     static void testStringWeightDiv2(){
         System.out.println(new StringWeightDiv2().countMinimums(1000));

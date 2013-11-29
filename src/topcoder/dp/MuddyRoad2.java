@@ -12,12 +12,12 @@ public class MuddyRoad2 {
     public int theCount(int N, int muddyCount){
         int[][][] dp = new int[N][muddyCount+1][3];
         dp[0][0][1] = 1;
-        for(int i=1; i<N; i++){
+        for(int i=0; i<N-1; i++){
             int bound = Math.min(i, muddyCount);
             for(int j=0; j<=bound; j++){
                 for(int r=0; r<3; r++){
-                    dp[i][j][r] = (dp[i][j][r]+dp[i-1][j][(r-1+3)%3])%MOD;
-                    if(i>1 && j>0 && r!=2) dp[i][j][1] = (dp[i][j][1]+dp[i-2][j-1][(r-2+3)%3])%MOD;
+                    dp[i+1][j][(r+1)%3] = (dp[i+1][j][(r+1)%3]+dp[i][j][r])%MOD;
+                    if(i<N-2 && r!=0 && j<muddyCount) dp[i+2][j+1][1] = (dp[i+2][j+1][1]+dp[i][j][r])%MOD;
                 }
             }
         }
