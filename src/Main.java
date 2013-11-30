@@ -683,6 +683,16 @@ public class Main {
         String[] R = {"41 5 13 22 12 13 ","33 41 80 47 40 ","4","8 96 57 66 ","80 60 71 79"," 70 77 ","99"," 83 85 93 88 89 97 97 98"};
         System.out.println(new WolfInZooDivTwo().count(100,L,R));
     }
+    static void testNumberLabyrinthDiv2(){
+        String[] board =
+                       {"55255",
+                        ".0.0.",
+                        "..9..",
+                        "..3..",
+                        "3.9.3",
+                        "44.44"};
+        System.out.println(new NumberLabyrinthDiv2().getMinimumNumberOfMoves(board, 3, 2, 4, 2 ,10));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -763,7 +773,8 @@ public class Main {
 //        Randomness.exec();
 //        CowRun.main(args);
 //        testMuddyRoad2();
-        testWolfInZooDivTwo();
+//        testWolfInZooDivTwo();
+        testNumberLabyrinthDiv2();
 
     }
 
