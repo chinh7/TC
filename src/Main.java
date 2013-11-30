@@ -678,6 +678,11 @@ public class Main {
         int[] restricted = {1, 4, 5, 7, 3, 9, 8, 1, 7, 6, 3, 2, 6, 4, 5, 7};
         System.out.println(new KingdomAndPassword().newPassword(oldPassword, restricted));
     }
+    static void testWolfInZooDivTwo(){
+        String[] L = {"0 2 2 7 10 1","3 16 22 30 33 38"," 42 44 49 51 57 60 62"," 65 69 72 74 77 7","8 81 84 88 91 93 96"};
+        String[] R = {"41 5 13 22 12 13 ","33 41 80 47 40 ","4","8 96 57 66 ","80 60 71 79"," 70 77 ","99"," 83 85 93 88 89 97 97 98"};
+        System.out.println(new WolfInZooDivTwo().count(100,L,R));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -754,11 +759,12 @@ public class Main {
 //        MMATCH.main(args);
 //        new Nov3().main(args);
 //        testKingdomAndPassword();
-//          testLittleElephantAndArray();
-
-//            Randomness.exec();
+//        testLittleElephantAndArray();
+//        Randomness.exec();
 //        CowRun.main(args);
-          testMuddyRoad2();
+//        testMuddyRoad2();
+        testWolfInZooDivTwo();
+
     }
 
 }
