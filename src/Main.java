@@ -700,6 +700,11 @@ public class Main {
         int[] BobEnd = {2,1};
         System.out.println(new AliceBobShuffle().countWays(AliceStart, BobStart, AliceEnd, BobEnd));
     }
+    static void testEnclosingTriangleColorful(){
+        int[] x = {1,2,3};
+        int[] y = {1,3,2};
+        System.out.println(new EnclosingTriangleColorful().getNumber(4, x,y));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -782,7 +787,8 @@ public class Main {
 //        testMuddyRoad2();
 //        testWolfInZooDivTwo();
 //        testNumberLabyrinthDiv2();
-        testAliceBobShuffle();
+//        testAliceBobShuffle();
+        testEnclosingTriangleColorful();
 
     }
 
