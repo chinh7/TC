@@ -667,7 +667,7 @@ public class Main {
     static void testScoringSystems(){
         int[] c = {6, 6, 6, 6, 6, 8, 8, 8, 8, 8};
         int[] s = {5, 5, 5, 5, 5, 7, 7, 7, 7, 7};
-        System.out.println(new ScoringSystems().isEquivalent(c,s));
+        System.out.println(new ScoringSystems().isEquivalent(c, s));
     }
     static void testPackingSquares(){
         int[] a = {0,0,0};
@@ -681,7 +681,7 @@ public class Main {
     static void testWolfInZooDivTwo(){
         String[] L = {"0 2 2 7 10 1","3 16 22 30 33 38"," 42 44 49 51 57 60 62"," 65 69 72 74 77 7","8 81 84 88 91 93 96"};
         String[] R = {"41 5 13 22 12 13 ","33 41 80 47 40 ","4","8 96 57 66 ","80 60 71 79"," 70 77 ","99"," 83 85 93 88 89 97 97 98"};
-        System.out.println(new WolfInZooDivTwo().count(100,L,R));
+        System.out.println(new WolfInZooDivTwo().count(100, L, R));
     }
     static void testNumberLabyrinthDiv2(){
         String[] board =
@@ -691,7 +691,14 @@ public class Main {
                         "..3..",
                         "3.9.3",
                         "44.44"};
-        System.out.println(new NumberLabyrinthDiv2().getMinimumNumberOfMoves(board, 3, 2, 4, 2 ,10));
+        System.out.println(new NumberLabyrinthDiv2().getMinimumNumberOfMoves(board, 3, 2, 4, 2, 10));
+    }
+    static void testAliceBobShuffle(){
+        int[] AliceStart = {1,2};
+        int[] BobStart = {3};
+        int[] AliceEnd = {3};
+        int[] BobEnd = {2,1};
+        System.out.println(new AliceBobShuffle().countWays(AliceStart, BobStart, AliceEnd, BobEnd));
     }
 
     public static void main(String[] args) throws Exception{
@@ -774,7 +781,8 @@ public class Main {
 //        CowRun.main(args);
 //        testMuddyRoad2();
 //        testWolfInZooDivTwo();
-        testNumberLabyrinthDiv2();
+//        testNumberLabyrinthDiv2();
+        testAliceBobShuffle();
 
     }
 
