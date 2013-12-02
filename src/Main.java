@@ -703,7 +703,13 @@ public class Main {
     static void testEnclosingTriangleColorful(){
         int[] x = {1,2,3};
         int[] y = {1,3,2};
-        System.out.println(new EnclosingTriangleColorful().getNumber(4, x,y));
+        System.out.println(new EnclosingTriangleColorful().getNumber(4, x, y));
+    }
+    static void testCharacterBoard2(){
+        String[] fragment = {"abababacac",
+                "aaacacacbb",
+                "ccabababab"};
+        System.out.println(new CharacterBoard2().countGenerators(fragment, 882,1,1));
     }
 
     public static void main(String[] args) throws Exception{
@@ -788,8 +794,8 @@ public class Main {
 //        testWolfInZooDivTwo();
 //        testNumberLabyrinthDiv2();
 //        testAliceBobShuffle();
-        testEnclosingTriangleColorful();
-
+//        testEnclosingTriangleColorful();
+        testCharacterBoard2();
     }
 
 }
