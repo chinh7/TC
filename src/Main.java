@@ -711,6 +711,12 @@ public class Main {
                 "ccabababab"};
         System.out.println(new CharacterBoard2().countGenerators(fragment, 882,1,1));
     }
+    static void testFoxAndTouristFamilies(){
+        int[] A = {0,0,0};
+        int[] B = {1,2,3};
+        int[] f = {1,2};
+        System.out.println(new FoxAndTouristFamilies().expectedLength(A,B,f));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -795,7 +801,8 @@ public class Main {
 //        testNumberLabyrinthDiv2();
 //        testAliceBobShuffle();
 //        testEnclosingTriangleColorful();
-        testCharacterBoard2();
+//        testCharacterBoard2();
+        testFoxAndTouristFamilies();
     }
 
 }
