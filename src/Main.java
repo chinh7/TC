@@ -728,6 +728,14 @@ public class Main {
     static void testNoRepeatPlaylist(){
         System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
     }
+    static void testSimilarNames2(){
+        String[] names = {"taro", "jiro", "hanako"};
+        int L = 2;
+        System.out.println(new SimilarNames2().count(names, L));
+    }
+    static void testBigFatInteger2(){
+        System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -816,7 +824,9 @@ public class Main {
 //        testCharacterBoard2();
 //        testFoxAndTouristFamilies();
 //        testTheTicketsDivOne();
-        testNoRepeatPlaylist();
+//        testNoRepeatPlaylist();
+//        testSimilarNames2();
+        testBigFatInteger2();
 
     }
 
