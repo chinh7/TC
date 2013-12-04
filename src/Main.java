@@ -705,6 +705,14 @@ public class Main {
         int[] y = {1,3,2};
         System.out.println(new EnclosingTriangleColorful().getNumber(4, x,y));
     }
+    static void testTreeUnion(){
+        String[] tree1 = {"0 ", "1 1 1"};
+        String[] tree2 = {"0 1 0 ", "1"};
+        System.out.println(new TreeUnion().expectedCycles(tree1, tree2, 5));
+    }
+    static void testTheTicketsDivOne(){
+        System.out.println(new TheTicketsDivOne().find(3,2));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -788,8 +796,9 @@ public class Main {
 //        testWolfInZooDivTwo();
 //        testNumberLabyrinthDiv2();
 //        testAliceBobShuffle();
-        testEnclosingTriangleColorful();
-
+//        testEnclosingTriangleColorful();
+//        testTreeUnion();
+        testTheTicketsDivOne();
     }
 
 }
