@@ -729,7 +729,7 @@ public class Main {
         System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
     }
     static void testSimilarNames2(){
-        String[] names = {"taro", "jiro", "hanako"};
+        String[] names = {"hideo", "hideto", "hideki", "hide"};
         int L = 2;
         System.out.println(new SimilarNames2().count(names, L));
     }
@@ -825,8 +825,8 @@ public class Main {
 //        testFoxAndTouristFamilies();
 //        testTheTicketsDivOne();
 //        testNoRepeatPlaylist();
-//        testSimilarNames2();
-        testBigFatInteger2();
+        testSimilarNames2();
+//        testBigFatInteger2();
 
     }
 
