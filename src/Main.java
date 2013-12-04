@@ -703,7 +703,7 @@ public class Main {
     static void testEnclosingTriangleColorful(){
         int[] x = {1,2,3};
         int[] y = {1,3,2};
-        System.out.println(new EnclosingTriangleColorful().getNumber(4, x,y));
+        System.out.println(new EnclosingTriangleColorful().getNumber(4, x, y));
     }
     static void testTreeUnion(){
         String[] tree1 = {"0 ", "1 1 1"};
@@ -711,19 +711,22 @@ public class Main {
         System.out.println(new TreeUnion().expectedCycles(tree1, tree2, 5));
     }
     static void testTheTicketsDivOne(){
-        System.out.println(new TheTicketsDivOne().find(3,2));
+        System.out.println(new TheTicketsDivOne().find(3, 2));
     }
     static void testCharacterBoard2(){
         String[] fragment = {"abababacac",
                 "aaacacacbb",
                 "ccabababab"};
-        System.out.println(new CharacterBoard2().countGenerators(fragment, 882,1,1));
+        System.out.println(new CharacterBoard2().countGenerators(fragment, 882, 1, 1));
     }
     static void testFoxAndTouristFamilies(){
         int[] A = {0,0,0};
         int[] B = {1,2,3};
         int[] f = {1,2};
-        System.out.println(new FoxAndTouristFamilies().expectedLength(A,B,f));
+        System.out.println(new FoxAndTouristFamilies().expectedLength(A, B, f));
+    }
+    static void testNoRepeatPlaylist(){
+        System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
     }
 
     public static void main(String[] args) throws Exception{
@@ -812,7 +815,8 @@ public class Main {
 //        testEnclosingTriangleColorful();
 //        testCharacterBoard2();
 //        testFoxAndTouristFamilies();
-        testTheTicketsDivOne();
+//        testTheTicketsDivOne();
+        testNoRepeatPlaylist();
 
     }
 

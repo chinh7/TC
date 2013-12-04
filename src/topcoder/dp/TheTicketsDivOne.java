@@ -8,6 +8,11 @@ package topcoder.dp;
  * To change this template use File | Settings | File Templates.
  */
 public class TheTicketsDivOne {
+
+    // f[n][1] = 1/6 + f[n][n];
+    // f[n][2] = 1/3*f[n-1][1]+1/2*f[n][1]
+    // f[n][3] = 1/3*f[n-1][2]+1/2*f[n][2]
+    // ..
     public double find(int n, int m){
         double[][] f = new double[n+1][n+1];
         f[1][1] = 1;
