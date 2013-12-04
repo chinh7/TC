@@ -713,6 +713,18 @@ public class Main {
     static void testTheTicketsDivOne(){
         System.out.println(new TheTicketsDivOne().find(3,2));
     }
+    static void testCharacterBoard2(){
+        String[] fragment = {"abababacac",
+                "aaacacacbb",
+                "ccabababab"};
+        System.out.println(new CharacterBoard2().countGenerators(fragment, 882,1,1));
+    }
+    static void testFoxAndTouristFamilies(){
+        int[] A = {0,0,0};
+        int[] B = {1,2,3};
+        int[] f = {1,2};
+        System.out.println(new FoxAndTouristFamilies().expectedLength(A,B,f));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -796,9 +808,12 @@ public class Main {
 //        testWolfInZooDivTwo();
 //        testNumberLabyrinthDiv2();
 //        testAliceBobShuffle();
-//        testEnclosingTriangleColorful();
 //        testTreeUnion();
+//        testEnclosingTriangleColorful();
+//        testCharacterBoard2();
+//        testFoxAndTouristFamilies();
         testTheTicketsDivOne();
+
     }
 
 }
