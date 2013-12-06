@@ -717,6 +717,26 @@ public class Main {
         int[] f = {1,2};
         System.out.println(new FoxAndTouristFamilies().expectedLength(A,B,f));
     }
+    static void testTreeUnionDiv2(){
+        String[] tree1 = {"-X---",
+                "X-XXX",
+                "-X---",
+                "-X---",
+                "-X---"};
+        String[] tree2 = {"-X-X-",
+                "X-X-X",
+                "-X---",
+                "X----",
+                "-X---"};
+        System.out.println(new TreeUnionDiv2().maximumCycles(tree1, tree2, 6));
+    }
+    static void testCutTheNumbers(){
+        String[] board = {"001",
+                "010",
+                "111",
+                "100"};
+        System.out.println(new CutTheNumbers().maximumSum(board));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -794,7 +814,6 @@ public class Main {
 //        new Nov3().main(args);
 //        testKingdomAndPassword();
 //        testLittleElephantAndArray();
-//        Randomness.exec();
 //        CowRun.main(args);
 //        testMuddyRoad2();
 //        testWolfInZooDivTwo();
@@ -802,7 +821,10 @@ public class Main {
 //        testAliceBobShuffle();
 //        testEnclosingTriangleColorful();
 //        testCharacterBoard2();
-        testFoxAndTouristFamilies();
+//        testFoxAndTouristFamilies();
+//        Randomness.main(args);
+//        testTreeUnionDiv2();
+        testCutTheNumbers();
     }
 
 }

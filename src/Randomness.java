@@ -137,7 +137,23 @@ public class Randomness {
         mergeSort(a, mid+1, right);
         merge(a, left, mid, right);
     }
-    public static void exec(){
+
+    //add without using +
+    static int add(int a, int b){
+        int carry = 0;
+        int result = 0;
+        int i;
+        for(i=0; a>0||b>0; i++){
+            int ba = a&1;
+            int bb = b&1;
+            result = result|((carry^ba^bb)<<i);
+            carry = (ba&bb) | (bb&carry) | (carry&ba);
+            a = a>>1;
+            b = b>>1;
+        }
+        return result|(carry<<i);
+    }
+    public static void main(String[] args){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
 //        SuffixArrayFactory saf = new SuffixArrayFactory("abab");
@@ -155,23 +171,17 @@ public class Randomness {
 //        mergeSort(a, 0, a.length-1);
 //        for(int i=0; i<a.length; i++) System.out.println(a[i]);
 
-        int[] a = {5,1,7,5,0,1,2,3,2};
-//        Arrays.sort(a);
-//        int slot = 0;
-//
+//        int[] a = {5,1,7,5,0,1,2,3,2};
+//        int pos = 0;
 //        for(int i=0; i<a.length; i++){
-//            if(i==a.length-1 || a[i]!=a[i+1]) a[slot++] = a[i];
+//            boolean valid = true;
+//            for(int j=i-1; j>=0; j--){
+//                if(a[i]==a[j]) valid=false;
+//            }
+//            if(valid) a[pos++]=a[i];
 //        }
-//        for(int i=0; i<slot; i++) System.out.print(a[i]+ " ");
-//        System.out.println();
-        int pos = 0;
-        for(int i=0; i<a.length; i++){
-            boolean valid = true;
-            for(int j=i-1; j>=0; j--){
-                if(a[i]==a[j]) valid=false;
-            }
-            if(valid) a[pos++]=a[i];
-        }
-        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
+//        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
+
+        System.out.println(add(77,88));
     }
 }
