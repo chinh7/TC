@@ -705,6 +705,14 @@ public class Main {
         int[] y = {1,3,2};
         System.out.println(new EnclosingTriangleColorful().getNumber(4, x, y));
     }
+    static void testTreeUnion(){
+        String[] tree1 = {"0 ", "1 1 1"};
+        String[] tree2 = {"0 1 0 ", "1"};
+        System.out.println(new TreeUnion().expectedCycles(tree1, tree2, 5));
+    }
+    static void testTheTicketsDivOne(){
+        System.out.println(new TheTicketsDivOne().find(3, 2));
+    }
     static void testCharacterBoard2(){
         String[] fragment = {"abababacac",
                 "aaacacacbb",
@@ -736,6 +744,17 @@ public class Main {
                 "111",
                 "100"};
         System.out.println(new CutTheNumbers().maximumSum(board));
+    }
+    static void testNoRepeatPlaylist(){
+        System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
+    }
+    static void testSimilarNames2(){
+        String[] names = {"hideo", "hideto", "hideki", "hide"};
+        int L = 2;
+        System.out.println(new SimilarNames2().count(names, L));
+    }
+    static void testBigFatInteger2(){
+        System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
     }
 
     public static void main(String[] args) throws Exception{
@@ -814,6 +833,7 @@ public class Main {
 //        new Nov3().main(args);
 //        testKingdomAndPassword();
 //        testLittleElephantAndArray();
+//        Randomness.exec();
 //        CowRun.main(args);
 //        testMuddyRoad2();
 //        testWolfInZooDivTwo();
@@ -821,10 +841,16 @@ public class Main {
 //        testAliceBobShuffle();
 //        testEnclosingTriangleColorful();
 //        testCharacterBoard2();
-//        testFoxAndTouristFamilies();
 //        Randomness.main(args);
 //        testTreeUnionDiv2();
+//        testTreeUnion();
+//        testFoxAndTouristFamilies();
+//        testTheTicketsDivOne();
+//        testNoRepeatPlaylist();
+//        testSimilarNames2();
+//        testBigFatInteger2();
         testCutTheNumbers();
+
     }
 
 }
