@@ -1,4 +1,5 @@
 import codechef.MMATCH;
+import com.sun.scenario.effect.Merge;
 import stopcoder.Nov1;
 import stopcoder.Nov3;
 import topcoder.*;
@@ -736,6 +737,11 @@ public class Main {
     static void testBigFatInteger2(){
         System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
     }
+    static void testMergersDivTwo(){
+        int[] revenues = {869, 857, -938, -290, 79, -901, 32, -907, 256, -167, 510, -965, -826, 808, 890,
+                -233, -881, 255, -709, 506, 334, -184, 726, -406, 204, -912, 325, -445, 440, -368};
+        System.out.println(new MergersDivTwo().findMaximum(revenues, 7));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -825,8 +831,9 @@ public class Main {
 //        testFoxAndTouristFamilies();
 //        testTheTicketsDivOne();
 //        testNoRepeatPlaylist();
-        testSimilarNames2();
+//        testSimilarNames2();
 //        testBigFatInteger2();
+        testMergersDivTwo();
 
     }
 
