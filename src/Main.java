@@ -1,4 +1,8 @@
 import codechef.MMATCH;
+import codeforce.R215D1A;
+import codeforce.R215D1B;
+import codeforce.R215D1C;
+import codeforce.R215D1D;
 import stopcoder.Nov1;
 import stopcoder.Nov3;
 import topcoder.*;
@@ -717,13 +721,13 @@ public class Main {
         String[] fragment = {"abababacac",
                 "aaacacacbb",
                 "ccabababab"};
-        System.out.println(new CharacterBoard2().countGenerators(fragment, 882,1,1));
+        System.out.println(new CharacterBoard2().countGenerators(fragment, 882, 1, 1));
     }
     static void testFoxAndTouristFamilies(){
         int[] A = {0,0,0};
         int[] B = {1,2,3};
         int[] f = {1,2};
-        System.out.println(new FoxAndTouristFamilies().expectedLength(A,B,f));
+        System.out.println(new FoxAndTouristFamilies().expectedLength(A, B, f));
     }
     static void testTreeUnionDiv2(){
         String[] tree1 = {"-X---",
@@ -746,15 +750,18 @@ public class Main {
         System.out.println(new CutTheNumbers().maximumSum(board));
     }
     static void testNoRepeatPlaylist(){
-        System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
+        System.out.println(new NoRepeatPlaylist().numPlaylists(50, 5, 100));
     }
     static void testSimilarNames2(){
-        String[] names = {"hideo", "hideto", "hideki", "hide"};
-        int L = 2;
+        String[] names = {"debfd", "fdedc", "cdaff", "aefdb", "edb", "feec", "dc", "cddfa", "aa", "dece", "edd", "c", "acfff", "dcae", "eee", "ba", "dcd", "ccbc", "ddbf", "cf", "f", "dfafe", "adfe", "fdbce", "dcab", "cfbe", "fdcb", "dfca", "cc", "a", "aaad", "fcefc", "eca", "ccef", "ff", "ddbef", "aad", "eb", "baf", "dafec", "ebdb", "fae", "aefe", "cdf", "ad", "d", "eecde", "bcad", "dddbe", "eed"};
+        int L = 6;
         System.out.println(new SimilarNames2().count(names, L));
     }
     static void testBigFatInteger2(){
-        System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
+        System.out.println(new BigFatInteger2().isDivisible(2, 2, 4, 1));
+    }
+    static void testTheCowDivTwo(){
+        System.out.println(new TheCowDivTwo().find(1000,47));
     }
 
     public static void main(String[] args) throws Exception{
@@ -849,7 +856,9 @@ public class Main {
 //        testNoRepeatPlaylist();
 //        testSimilarNames2();
 //        testBigFatInteger2();
-        testCutTheNumbers();
+//        testCutTheNumbers();
+//        testTheCowDivTwo();
+        R215D1A.main(args);
 
     }
 
