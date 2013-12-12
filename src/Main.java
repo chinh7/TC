@@ -729,39 +729,16 @@ public class Main {
         int[] f = {1,2};
         System.out.println(new FoxAndTouristFamilies().expectedLength(A, B, f));
     }
-    static void testTreeUnionDiv2(){
-        String[] tree1 = {"-X---",
-                "X-XXX",
-                "-X---",
-                "-X---",
-                "-X---"};
-        String[] tree2 = {"-X-X-",
-                "X-X-X",
-                "-X---",
-                "X----",
-                "-X---"};
-        System.out.println(new TreeUnionDiv2().maximumCycles(tree1, tree2, 6));
-    }
-    static void testCutTheNumbers(){
-        String[] board = {"001",
-                "010",
-                "111",
-                "100"};
-        System.out.println(new CutTheNumbers().maximumSum(board));
-    }
     static void testNoRepeatPlaylist(){
-        System.out.println(new NoRepeatPlaylist().numPlaylists(50, 5, 100));
+        System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
     }
     static void testSimilarNames2(){
-        String[] names = {"debfd", "fdedc", "cdaff", "aefdb", "edb", "feec", "dc", "cddfa", "aa", "dece", "edd", "c", "acfff", "dcae", "eee", "ba", "dcd", "ccbc", "ddbf", "cf", "f", "dfafe", "adfe", "fdbce", "dcab", "cfbe", "fdcb", "dfca", "cc", "a", "aaad", "fcefc", "eca", "ccef", "ff", "ddbef", "aad", "eb", "baf", "dafec", "ebdb", "fae", "aefe", "cdf", "ad", "d", "eecde", "bcad", "dddbe", "eed"};
-        int L = 6;
+        String[] names = {"hideo", "hideto", "hideki", "hide"};
+        int L = 2;
         System.out.println(new SimilarNames2().count(names, L));
     }
     static void testBigFatInteger2(){
-        System.out.println(new BigFatInteger2().isDivisible(2, 2, 4, 1));
-    }
-    static void testTheCowDivTwo(){
-        System.out.println(new TheCowDivTwo().find(1000,47));
+        System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
     }
 
     public static void main(String[] args) throws Exception{
@@ -840,7 +817,6 @@ public class Main {
 //        new Nov3().main(args);
 //        testKingdomAndPassword();
 //        testLittleElephantAndArray();
-//        Randomness.exec();
 //        CowRun.main(args);
 //        testMuddyRoad2();
 //        testWolfInZooDivTwo();
@@ -856,6 +832,7 @@ public class Main {
 //        testNoRepeatPlaylist();
 //        testSimilarNames2();
 //        testBigFatInteger2();
+//        testMergersDivTwo();
 //        testCutTheNumbers();
 //        testTheCowDivTwo();
         R215D1A.main(args);
