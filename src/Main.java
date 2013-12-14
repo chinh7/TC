@@ -1,14 +1,10 @@
-import codechef.MMATCH;
-import codeforce.R215D1A;
-import codeforce.R215D1B;
-import codeforce.R215D1C;
-import codeforce.R215D1D;
-import stopcoder.Nov1;
-import stopcoder.Nov3;
+import codeforce.*;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
+import usaco.Optmilk;
+import usaco.Vacationgold;
 
 /**
  * Created with IntelliJ IDEA.
@@ -730,7 +726,7 @@ public class Main {
         System.out.println(new FoxAndTouristFamilies().expectedLength(A, B, f));
     }
     static void testNoRepeatPlaylist(){
-        System.out.println(new NoRepeatPlaylist().numPlaylists(50,5,100));
+        System.out.println(new NoRepeatPlaylist().numPlaylists(50, 5, 100));
     }
     static void testSimilarNames2(){
         String[] names = {"hideo", "hideto", "hideki", "hide"};
@@ -738,7 +734,12 @@ public class Main {
         System.out.println(new SimilarNames2().count(names, L));
     }
     static void testBigFatInteger2(){
-        System.out.println(new BigFatInteger2().isDivisible(2,2,4,1));
+        System.out.println(new BigFatInteger2().isDivisible(2, 2, 4, 1));
+    }
+    static void testMergersDivTwo(){
+        int[] revenues = {869, 857, -938, -290, 79, -901, 32, -907, 256, -167, 510, -965, -826, 808, 890,
+                -233, -881, 255, -709, 506, 334, -184, 726, -406, 204, -912, 325, -445, 440, -368};
+        System.out.println(new MergersDivTwo().findMaximum(revenues, 7));
     }
 
     public static void main(String[] args) throws Exception{
@@ -835,8 +836,8 @@ public class Main {
 //        testMergersDivTwo();
 //        testCutTheNumbers();
 //        testTheCowDivTwo();
-        R215D1A.main(args);
-
+//        R219D2B.main(args);
+        Vacationgold.main(args);
     }
 
 }

@@ -8,6 +8,41 @@ import java.util.HashMap;
  * To change this template use File | Settings | File Templates.
  */
 public class Randomness {
+    static void swap(int[] array, int i, int j){
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
+    static int partition(int[] array, int left, int right){
+        int pivotIndex = left+ (int)Math.random()*(right-left+1);
+        int pivot = array[pivotIndex];
+        swap(array, pivotIndex, right);
+        int ret = left;
+        for(int i=left; i<right; i++){
+            if(array[i]<=pivot){
+                swap(array, i, ret);
+                ret++;
+            }
+        }
+        swap(array, ret, right);
+        return ret;
+    }
+    static int select(int[] array, int left, int right, int k){
+        if(k>right-left+1) return Integer.MIN_VALUE;
+        if(left==right) return array[left];
+        int pivotIndex = partition(array, left, right);
+        int pivotDist = pivotIndex-left;
+        if(pivotDist==k-1) return array[pivotIndex];
+        if(pivotDist>k-1) return select(array, left, pivotIndex-1, k);
+        else return select(array, pivotIndex+1, right, k-1-pivotDist);
+    }
+    static void qs(int[] array, int left, int right){
+        if(left>=right) return;
+        int pivotIndex = partition(array, left, right);
+        qs(array, left, pivotIndex-1);
+        qs(array, pivotIndex+1, right);
+    }
+
     static void quicksort(int[] array, int left, int right){
         if(left>=right) return;
         int pivot = array[left+ (int)Math.random()*(right-left+1)];
@@ -171,7 +206,7 @@ public class Randomness {
 //        mergeSort(a, 0, a.length-1);
 //        for(int i=0; i<a.length; i++) System.out.println(a[i]);
 
-//        int[] a = {5,1,7,5,0,1,2,3,2};
+        int[] a = {5,1,7,5,0,1,2,3,2};
 //        int pos = 0;
 //        for(int i=0; i<a.length; i++){
 //            boolean valid = true;
@@ -182,6 +217,20 @@ public class Randomness {
 //        }
 //        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
 
-        System.out.println(add(77,88));
+//        for(int i=0; i<slot; i++) System.out.print(a[i]+ " ");
+//        System.out.println();
+//        int pos = 0;
+//        for(int i=0; i<a.length; i++){
+//            boolean valid = true;
+//            for(int j=i-1; j>=0; j--){
+//                if(a[i]==a[j]) valid=false;
+//            }
+//            if(valid) a[pos++]=a[i];
+//        }
+//        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
+//        int[] a = {2,3,3};
+        qs(a, 0, a.length-1);
+        System.out.println(select(a, 0, a.length-1, 3));
+
     }
 }
