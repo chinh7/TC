@@ -741,6 +741,12 @@ public class Main {
                 -233, -881, 255, -709, 506, 334, -184, 726, -406, 204, -912, 325, -445, 440, -368};
         System.out.println(new MergersDivTwo().findMaximum(revenues, 7));
     }
+    static void testWinterAndReindeers(){
+        String[] allA = {"AAAAC"};
+        String[] allB = {"AACAA"};
+        String[] allC = {"AC"};
+        System.out.println(new WinterAndReindeers().getNumber(allA, allB, allC));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -837,7 +843,8 @@ public class Main {
 //        testCutTheNumbers();
 //        testTheCowDivTwo();
 //        R219D2B.main(args);
-        Vacationgold.main(args);
+//        Vacationgold.main(args);
+        testWinterAndReindeers();
     }
 
 }
