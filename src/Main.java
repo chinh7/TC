@@ -844,7 +844,12 @@ public class Main {
 //        testTheCowDivTwo();
 //        R219D2B.main(args);
 //        Vacationgold.main(args);
-        testWinterAndReindeers();
+//        testWinterAndReindeers();
+//        R219D2E.main(args);
+        String front = "BBBBB.BBBBBBBBB.BBBBBBB.BBBB.B.BB..BB.B.BBBBBBBBBB";
+        String side = ".B.BBB..BBBBBB.BBBB.B...BBBB.BB.BBBBBBBBBB.....BBB";
+        System.out.println(new BlackBoxDiv2().count(front, side));
+
     }
 
 }
