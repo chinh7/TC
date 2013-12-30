@@ -849,7 +849,7 @@ public class Main {
 //        String front = "BBBBB.BBBBBBBBB.BBBBBBB.BBBB.B.BB..BB.B.BBBBBBBBBB";
 //        String side = ".B.BBB..BBBBBB.BBBB.B...BBBB.BB.BBBBBBBBBB.....BBB";
 //        System.out.println(new BlackBoxDiv2().count(front, side));
-        R218D2D.main(args);
+        End2013D.main(args);
 
     }
 
