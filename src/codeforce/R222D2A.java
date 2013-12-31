@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * Time: 6:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class R222D1A {
+public class R222D2A {
 
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

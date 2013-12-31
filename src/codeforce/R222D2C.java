@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * Time: 6:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class R222D1C {
+public class R222D2C {
     static int n, m, k, s=0;
     static boolean[] isEmpty;
     static boolean[] isVisited;
