@@ -6,6 +6,11 @@ import topcoder.graph.*;
 import usaco.Optmilk;
 import usaco.Vacationgold;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chinh
@@ -851,11 +856,12 @@ public class Main {
 //        System.out.println(new BlackBoxDiv2().count(front, side));
 //        R217D2E.main(args);
 
-        String[] graph = {"111","111","011"};
-        int[] winprob = {2,1,10};
-        int[] loseprob = {20,20,10};
-        int start = 0;
-        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
+//        String[] graph = {"111","111","011"};
+//        int[] winprob = {2,1,10};
+//        int[] loseprob = {20,20,10};
+//        int start = 0;
+//        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
+
     }
 
 }
