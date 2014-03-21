@@ -1,6 +1,5 @@
 package codeforce;
 
-import sun.jvm.hotspot.debugger.cdbg.PointerType;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
