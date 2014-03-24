@@ -4,6 +4,7 @@ import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
 import usaco.Optmilk;
+import usaco.Skicourse;
 import usaco.Vacationgold;
 
 /**
@@ -849,13 +850,19 @@ public class Main {
 //        String front = "BBBBB.BBBBBBBBB.BBBBBBB.BBBB.B.BB..BB.B.BBBBBBBBBB";
 //        String side = ".B.BBB..BBBBBB.BBBB.B...BBBB.BB.BBBBBBBBBB.....BBB";
 //        System.out.println(new BlackBoxDiv2().count(front, side));
-//        R217D2E.main(args);
+//        R224D2C.main(args);
 
-        String[] graph = {"111","111","011"};
-        int[] winprob = {2,1,10};
-        int[] loseprob = {20,20,10};
-        int start = 0;
-        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
+//        String[] graph = {"111","111","011"};
+//        int[] winprob = {2,1,10};
+//        int[] loseprob = {20,20,10};
+//        int start = 0;
+//        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
+
+//        Skicourse.main(args);
+        String[] graph ={"NYY",
+                "YNN",
+                "YNN"};
+        System.out.println(new BigOEasy().isBounded(graph));
     }
 
 }
