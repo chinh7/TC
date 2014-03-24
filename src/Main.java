@@ -748,6 +748,12 @@ public class Main {
         String[] allC = {"AC"};
         System.out.println(new WinterAndReindeers().getNumber(allA, allB, allC));
     }
+    static void testTaroCards(){
+        int[] first = {6, 20, 1, 11, 19, 14, 2, 8, 15, 21, 9, 10, 4, 16, 12, 17, 13, 22, 7, 18, 3, 5};
+        int[] second = {4, 5, 10, 7, 6, 2, 1, 10, 10, 7, 9, 4, 5, 9, 5, 10, 10, 3, 6, 6, 4, 4};
+        int K = 14;
+        System.out.println(new TaroCards().getNumber(first, second, K));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -857,12 +863,8 @@ public class Main {
 //        int[] loseprob = {20,20,10};
 //        int start = 0;
 //        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
+          testTaroCards();
 
-//        Skicourse.main(args);
-        String[] graph ={"NYY",
-                "YNN",
-                "YNN"};
-        System.out.println(new BigOEasy().isBounded(graph));
     }
 
 }
