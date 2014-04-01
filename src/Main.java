@@ -754,6 +754,10 @@ public class Main {
         int K = 14;
         System.out.println(new TaroCards().getNumber(first, second, K));
     }
+    static void testEllysCandyGame(){
+        int[] sweets = {177, 131, 142, 171, 411, 391, 17, 222, 100, 298};
+        System.out.println(new EllysCandyGame().getWinner(sweets));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -863,7 +867,8 @@ public class Main {
 //        int[] loseprob = {20,20,10};
 //        int start = 0;
 //        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
-          testTaroCards();
+//          testTaroCards();
+        testEllysCandyGame();
 
     }
 
