@@ -861,7 +861,6 @@ public class Main {
 //        int[] loseprob = {20,20,10};
 //        int start = 0;
 //        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
-        new R240D2D().main(args);
+        new R241D2D().main(args);
     }
-
 }
