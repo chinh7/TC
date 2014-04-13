@@ -752,6 +752,10 @@ public class Main {
         String[] allC = {"AC"};
         System.out.println(new WinterAndReindeers().getNumber(allA, allB, allC));
     }
+    static void testTwoLLogo(){
+        String[] grids = {"....", "...."};
+        System.out.println(new TwoLLogo().countWays(grids));
+    }
 
     public static void main(String[] args) throws Exception{
 //        testPenLift();
@@ -861,6 +865,6 @@ public class Main {
 //        int[] loseprob = {20,20,10};
 //        int start = 0;
 //        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
-        new R241D2D().main(args);
+        testTwoLLogo();
     }
 }
