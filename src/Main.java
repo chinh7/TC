@@ -865,6 +865,9 @@ public class Main {
 //        int[] loseprob = {20,20,10};
 //        int start = 0;
 //        System.out.println(new GraphWalkWithProbabilities().findprob(graph, winprob, loseprob, start));
-        testTwoLLogo();
+//        testTwoLLogo();
+//        System.out.println(new EllysScrabble().getMin("ZDJAHFUIHDFWFBUWIFBAAAAAAAA", 3));
+//        new CoderStrike2014E().main(args);
+        System.out.println(new MyVeryLongCake().cut(577007436));
     }
 }
