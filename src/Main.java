@@ -868,6 +868,7 @@ public class Main {
 //        testTwoLLogo();
 //        System.out.println(new EllysScrabble().getMin("ZDJAHFUIHDFWFBUWIFBAAAAAAAA", 3));
 //        new CoderStrike2014E().main(args);
-        System.out.println(new MyVeryLongCake().cut(577007436));
+//        System.out.println(new MyVeryLongCake().cut(577007436));
+        new CoderStrikeDiv1B().main(args);
     }
 }
