@@ -868,6 +868,9 @@ public class Main {
 //        testTwoLLogo();
 //        System.out.println(new EllysScrabble().getMin("ZDJAHFUIHDFWFBUWIFBAAAAAAAA", 3));
 //        new CoderStrike2014E().main(args);
-        System.out.println(new MyVeryLongCake().cut(577007436));
+//        System.out.println(new MyVeryLongCake().cut(577007436));
+        int[] Y1 = {7, 0, 4, 6, 5, 3, 1, 2};
+        int[] Y2 = {4, 1, 5, 7, 2, 3, 6, 0};
+        System.out.println(new MovingRooksDiv2().move(Y1, Y2));
     }
 }
