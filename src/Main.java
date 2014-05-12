@@ -869,8 +869,9 @@ public class Main {
 //        System.out.println(new EllysScrabble().getMin("ZDJAHFUIHDFWFBUWIFBAAAAAAAA", 3));
 //        new CoderStrike2014E().main(args);
 //        System.out.println(new MyVeryLongCake().cut(577007436));
-        new CoderStrikeDiv1C().main(args);
+//        new CoderStrikeDiv1C().main(args);
 //        System.out.println(new LongWordsDiv2().find("c"));
 //        System.out.println(new ChooseTheBestOne().countNumber(1234));
+        new R245D2E().main(args);
     }
 }
