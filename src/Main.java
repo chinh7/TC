@@ -872,6 +872,6 @@ public class Main {
 //        new CoderStrikeDiv1C().main(args);
 //        System.out.println(new LongWordsDiv2().find("c"));
 //        System.out.println(new ChooseTheBestOne().countNumber(1234));
-        new R245D2C().main(args);
+        new R246D2C().main(args);
     }
 }
