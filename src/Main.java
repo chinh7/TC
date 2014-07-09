@@ -1,15 +1,10 @@
 import codeforce.*;
+import codility.Magnesium;
+import codility.Natrium;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
-import usaco.Optmilk;
-import usaco.Vacationgold;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -872,6 +867,31 @@ public class Main {
 //        new CoderStrikeDiv1C().main(args);
 //        System.out.println(new LongWordsDiv2().find("c"));
 //        System.out.println(new ChooseTheBestOne().countNumber(1234));
-        new R246D2C().main(args);
+//        new R246D2C().main(args);
+//        System.out.println(7^3);
+//        new R247D2D().main(args);
+//        int n=4; int m=8;
+//        int[] A = {0, 2, 3, 2};
+//        int[] B = {0, 1, 2, 3};
+//        int[] C = {9, 15, 9, 1};
+//        System.out.println(new Magnesium().solution(n,A,B,C));
+//        new R248D1A().main(args);
+//        int[] a = {1,1,1,1,1,1,1,1,1,1,1,2,3,4,2,2,2};
+//        System.out.println(new Subsets().findSubset(a));
+//        new R250D2D().main(args);
+//        String[] board ={"A.P.PAAPPA",
+//                "PPP..P.PPP",
+//                "AAP.A.PAPA",
+//                "P.PA.AAA.A",
+//                "...PA.P.PA",
+//                "P..A.A.P..",
+//                "PAAP..A.A.",
+//                "PAAPPA.APA",
+//                ".P.AP.P.AA",
+//                "..APAPAA.."};
+//        int K=10;
+//        System.out.println(new ApplesAndPears().getArea(board, K));
+//        new GameOfSegments().winner(1000);
+        new ZeptoE().main(args);
     }
 }
