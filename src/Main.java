@@ -895,7 +895,7 @@ public class Main {
 //        new GameOfSegments().winner(1000);
 //        new ZeptoE().main(args);
 //        new R254D2B().main(args);
-        int[] A = {3 , 9 , -6 , 7 ,-3 , 9 , -6 , -10};
+        int[] A = {-2, -2, 6, -1, -9, -3, 1, 6};
         System.out.println(new Aluminium().solution(A));
     }
 }

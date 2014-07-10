@@ -6,11 +6,6 @@ package codility;
 public class Aluminium {
     int calc(int[] A){
         int n = A.length;
-        for(int i=0; i<n/2; i++){
-            int tmp = A[i];
-            A[i] = A[n-1-i];
-            A[n-1-i] = tmp;
-        }
         int[] f = new int[n];
         int curMax=f[0]=A[0];
         for(int i=1; i<n; i++){
@@ -18,11 +13,10 @@ public class Aluminium {
             f[i] = Math.max(f[i-1]+A[i], curMax);
         }
         int curSum = 0;
-        int result = Integer.MIN_VALUE;
-        for(int i=n-1; i>=0; i--){
-            curSum = Math.max(0, curSum+A[i]);
-            result = Math.max(result, curSum);
-            if(i>0) result = Math.max(result, f[i-1]+curSum-A[i]);
+        int result = curMax;
+        for(int i=n; i>=0; i--){
+            if(i>0) result = Math.max(result, f[i-1]+curSum);
+            if(i<n) curSum = Math.max(0, curSum+A[i]);
         }
         return result;
     }
