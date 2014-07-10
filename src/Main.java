@@ -1,4 +1,5 @@
 import codeforce.*;
+import codility.Aluminium;
 import codility.Magnesium;
 import codility.Natrium;
 import topcoder.*;
@@ -892,6 +893,9 @@ public class Main {
 //        int K=10;
 //        System.out.println(new ApplesAndPears().getArea(board, K));
 //        new GameOfSegments().winner(1000);
-        new ZeptoE().main(args);
+//        new ZeptoE().main(args);
+//        new R254D2B().main(args);
+        int[] A = {3 , 9 , -6 , 7 ,-3 , 9 , -6 , -10};
+        System.out.println(new Aluminium().solution(A));
     }
 }
