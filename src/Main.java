@@ -1,7 +1,4 @@
-import codeforce.*;
-import codility.Aluminium;
-import codility.Magnesium;
-import codility.Natrium;
+import topcoder.BishopMove;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
@@ -895,7 +892,12 @@ public class Main {
 //        new GameOfSegments().winner(1000);
 //        new ZeptoE().main(args);
 //        new R254D2B().main(args);
-        int[] A = {-2, -2, 6, -1, -9, -3, 1, 6};
-        System.out.println(new Aluminium().solution(A));
+//        int[] A = {-2, -2, 6, -1, -9, -3, 1, 6};
+//        System.out.println(new Aluminium().solution(A));
+//        new R257D1B().main(args);
+//        System.out.println(new BishopMove().howManyMoves(1,3,5,5));
+//        System.out.println(new BracketExpressions().ifPossible("([]X()[()]XX}[])X{{}}]"));
+        int[] f = {1,0,0,0};
+        System.out.println(new InvariantSets().countSets(f));
     }
 }
