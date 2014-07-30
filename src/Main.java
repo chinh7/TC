@@ -1,3 +1,4 @@
+import codility.Silicium;
 import topcoder.BishopMove;
 import topcoder.*;
 import topcoder.datastructure.*;
@@ -897,7 +898,9 @@ public class Main {
 //        new R257D1B().main(args);
 //        System.out.println(new BishopMove().howManyMoves(1,3,5,5));
 //        System.out.println(new BracketExpressions().ifPossible("([]X()[()]XX}[])X{{}}]"));
-        int[] f = {1,0,0,0};
-        System.out.println(new InvariantSets().countSets(f));
+        int[] A = {1,3}, B = {1,5};
+        System.out.println(new Silicium().solution(6,7,3,A,B));
+
+//        new SuffixArrayFactory("ababa");
     }
 }
