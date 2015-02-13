@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -188,6 +189,7 @@ public class Randomness {
         }
         return result|(carry<<i);
     }
+
     public static void main(String[] args){
 //        int[] a = {33, 34, 10019, 10020, 3, 35, 10021, 10022, 5, 10023, 4, 10024, 6, 7, 10025, 8};
 //        System.out.println(longestInterval(a));
@@ -229,8 +231,33 @@ public class Randomness {
 //        }
 //        for(int i=0; i<pos; i++) System.out.print(a[i]+" ");
 //        int[] a = {2,3,3};
-        qs(a, 0, a.length-1);
-        System.out.println(select(a, 0, a.length-1, 3));
+//        qs(a, 0, a.length-1);
+//        System.out.println(select(a, 0, a.length-1, 3));
 
+        int n = 4;
+        ArrayList<StringBuilder>[] list = new ArrayList[n+1];
+        for(int i=0; i<=n; i++) list[i] = new ArrayList<StringBuilder>();
+        list[0].add(new StringBuilder(""));
+
+
+        StringBuilder open = new StringBuilder("(");
+        StringBuilder close = new StringBuilder(")");
+
+        for(int l=1; l<=n; l++){
+            for(int j=0; j<l; j++){
+                int i = l-j-1;
+                for(StringBuilder si : list[i]){
+                    for(StringBuilder sj : list[j]){
+                        StringBuilder sb = new StringBuilder();
+                        sb.append(open);
+                        sb.append(si);
+                        sb.append(close);
+                        sb.append(sj);
+                        list[l].add(sb);
+                    }
+                }
+            }
+        }
+        for(int i=0; i<list[n].size(); i++) System.out.println(list[n].get(i));
     }
 }

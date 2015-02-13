@@ -1,9 +1,14 @@
-import codility.Silicium;
-import topcoder.BishopMove;
+import codeforce.*;
 import topcoder.*;
 import topcoder.datastructure.*;
 import topcoder.dp.*;
 import topcoder.graph.*;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Random;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
 
 /**
  * Created with IntelliJ IDEA.
@@ -898,9 +903,27 @@ public class Main {
 //        new R257D1B().main(args);
 //        System.out.println(new BishopMove().howManyMoves(1,3,5,5));
 //        System.out.println(new BracketExpressions().ifPossible("([]X()[()]XX}[])X{{}}]"));
-        int[] A = {1,3}, B = {1,5};
-        System.out.println(new Silicium().solution(6,7,3,A,B));
+//        int[] A = {1,3}, B = {1,5};
+//        System.out.println(new Silicium().solution(6,7,3,A,B));
 
 //        new SuffixArrayFactory("ababa");
+//        new R275D1B().main(args);
+
+//        new Pogocow().main(args);
+//        new R270B().main(args);\
+
+//        new R279D2F().main(args);
+//        BinarySearchTree bst = new BinarySearchTree();
+//        bst.add(2);
+//        bst.add(1);
+//        bst.add(5);
+//        bst.add(4);
+//        System.out.println(bst.size);
+//        bst.remove(2);
+//        System.out.println(bst.ceiling(2).value);
+        int[] labels = {7, 12, 2, 12, 10, 13, 6, 5, 3, 3, 4, 11, 12, 4, 3, 1, 8, 11, 4, 7, 6, 5, 47};
+        int lower = 2;
+        int upper = 7;
+        System.out.println(new TheDictionary().find(7,4,47));
     }
 }
